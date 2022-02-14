@@ -1,0 +1,22 @@
+{
+  "name": "rascraper",
+  "version": "1.0.0",
+  "description": "scraper for retroarch and other systems",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "electron": "^17.0.0",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "typescript": "^4.5.5"
+  }
+}

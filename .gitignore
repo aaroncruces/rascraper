@@ -1,1 +1,5 @@
 api_examples.txt
+node_modules
+configs/screenscraper_dev_credentials.js
+**/*.js
+package-lock.json
