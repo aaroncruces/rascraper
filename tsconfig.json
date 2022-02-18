@@ -1,8 +1,8 @@
 {
-    "extends": "@tsconfig/node16/tsconfig.json",
-"compilerOptions": {
-  "preserveConstEnums": true
-},
-"include": ["./**/*"],
-"exclude": ["node_modules", "**/*.spec.ts"]
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "preserveConstEnums": true
+  },
+  "include": ["./**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

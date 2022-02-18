@@ -13,4 +13,6 @@ export interface Assets {
   titleCRC?: string;
   boxartURL?: string;
   boxartCRC?: string;
+  bezelURL?: string;
+  bezelCRC?: string;
 }

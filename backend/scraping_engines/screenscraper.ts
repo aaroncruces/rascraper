@@ -1,4 +1,6 @@
-import { Assets } from "./assets";
+import { Assets } from "./Assets";
+import { GameSystem } from "./GameSystems";
+import { ScrapeFunction } from "./ScrapeFunction";
 
 const axios = require("axios");
 
@@ -9,52 +11,77 @@ const {
 const softname = "rascraper";
 
 //TODO: GET AVAILABLE REGIONS TO SCRAPE
-const scrape = (
-  filename: any,
-  locale: string = "en",
-  customRegion: string
-): Promise<Assets> => {
-  const sourceurl = `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=rascraper&output=json&romtype=rom&romnom=${filename}`;
+/**
+ * if customRegion is undefined, it will get the region asset of the rom itself or the first one if not
+ * @param romName name to be searched online
+ * @param language, language of the descriptions
+ * @param customRegion For assets of other regions (like jp for an us game)
+ * @returns
+ */
+const scrape: ScrapeFunction = async (
+  romName: string,
+  romCRC?: string | undefined,
+  gamesystem: GameSystem | undefined = undefined,
+  language: string = "en",
+  customRegion: string | undefined = undefined
+) => {
+  let gameSystemIDParam = "";
+  if (gamesystem) {
+    gameSystemIDParam = "&systemeid=" + gamesystem.screenscraperID.toString();
+  }
 
-  return axios.get(sourceurl).then((response: any) => {
-    const responseObject = response.data;
-    let gameAssets: Assets = {};
+  const sourceURL = `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=rascraper&output=json&romtype=rom${gameSystemIDParam}&romnom=${romName}`;
+  //console.log(sourceURL);
+  let response;
+  try {
+    response = await axios.get(sourceURL);
+  } catch (error) {
+    return;
+  }
 
-    gameAssets.gameName = getNameFromResponse(responseObject);
+  const responseObject = response.data;
 
-    gameAssets.gameDescription = getDescriptionFromResponse(
-      responseObject,
-      locale
-    );
+  let gameAssets: Assets = {};
 
-    const snapObject = getMediaObjectFromResponse(
-      responseObject,
-      "ss",
-      customRegion
-    );
-    gameAssets.snapURL = snapObject?.url;
-    gameAssets.snapCRC = snapObject?.crc;
+  gameAssets.gameName = getNameFromResponse(responseObject);
 
-    const titleObject = getMediaObjectFromResponse(
-      responseObject,
-      "sstitle",
-      customRegion
-    );
-    gameAssets.titleURL = titleObject?.url;
-    gameAssets.titleCRC = titleObject?.crc;
+  gameAssets.gameDescription = getDescriptionFromResponse(
+    responseObject,
+    language
+  );
 
-    const boxartObject = getMediaObjectFromResponse(
-      responseObject,
-      "box-2D",
-      customRegion
-    );
-    gameAssets.boxartURL = boxartObject?.url;
-    gameAssets.boxartCRC = boxartObject?.crc;
+  const snapObject = getMediaObjectFromResponse(
+    responseObject,
+    "ss",
+    customRegion
+  );
+  gameAssets.snapURL = snapObject?.url;
+  gameAssets.snapCRC = snapObject?.crc;
 
-    console.log(gameAssets);
+  const titleObject = getMediaObjectFromResponse(
+    responseObject,
+    "sstitle",
+    customRegion
+  );
+  gameAssets.titleURL = titleObject?.url;
+  gameAssets.titleCRC = titleObject?.crc;
 
-    return gameAssets;
-  });
+  const boxartObject = getMediaObjectFromResponse(
+    responseObject,
+    "box-2D",
+    customRegion
+  );
+  gameAssets.boxartURL = boxartObject?.url;
+  gameAssets.boxartCRC = boxartObject?.crc;
+
+  const bezelObject = getMediaObjectFromResponse(
+    responseObject,
+    "bezel-16-9",
+    customRegion
+  );
+  gameAssets.bezelURL = bezelObject?.url;
+  gameAssets.bezelCRC = bezelObject?.crc;
+  return gameAssets;
 };
 
 const getNameFromResponse = (responseObject: any): string => {
@@ -95,8 +122,6 @@ const getMediaObjectFromResponse = (
 
   const romMediaArray: Array<mediaObject> = responseObject.response.jeu.medias;
 
-  console.log(romRegion + "----" + mediaType);
-
   let romMedia = romMediaArray.find(
     (romMediaItem) =>
       romMediaItem.region == romRegion && romMediaItem.type == mediaType
@@ -113,4 +138,4 @@ const getMediaObjectFromResponse = (
 const getRegionFromResponse = (responseObject: any) =>
   responseObject.response.jeu.regions.shortname;
 
-module.exports = scrape;
+export default scrape;

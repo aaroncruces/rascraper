@@ -2,5 +2,5 @@
 //console.log(argv);
 var scraper = require("./backend/scraper");
 //scraper.scrapeRom({ engine: "screenscraper", filename: "mslug.zip" });
-const testFolder = "./tests/";
-scraper.getRomList(testFolder);
+const testFolder = "./tests";
+scraper.scrapeFolder(testFolder);
