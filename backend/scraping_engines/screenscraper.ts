@@ -1,6 +1,7 @@
-import { Assets } from "./Assets";
-import { GameSystem } from "./GameSystems";
-import { ScrapeFunction } from "./ScrapeFunction";
+import { gameSystemFromScreenScraperID } from "../frontends/genericFunctions";
+import { Assets } from "../structures/Assets";
+import { GameSystem } from "../structures/GameSystems";
+import { ScrapeFunction } from "../structures/ScrapeFunction";
 
 const axios = require("axios");
 
@@ -81,6 +82,9 @@ const scrape: ScrapeFunction = async (
   );
   gameAssets.bezelURL = bezelObject?.url;
   gameAssets.bezelCRC = bezelObject?.crc;
+
+  const systemID = getIDFromResponse(responseObject);
+  gameAssets.deducedGameSystem = gameSystemFromScreenScraperID(systemID);
   return gameAssets;
 };
 
@@ -138,4 +142,6 @@ const getMediaObjectFromResponse = (
 const getRegionFromResponse = (responseObject: any) =>
   responseObject.response.jeu.regions.shortname;
 
+const getIDFromResponse = (responseObject: any): number =>
+  responseObject.response.jeu.systeme.id;
 export default scrape;

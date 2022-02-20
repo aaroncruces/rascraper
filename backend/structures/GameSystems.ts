@@ -6,6 +6,12 @@ export interface GameSystem {
   extensions: Array<string>;
 }
 
+/**
+ * the weirdness on the use of this module
+ * comes by the necesity of the use of
+ * something like an enum of custom type-defined objects
+ * wich is not allowed in TS
+ */
 export class GameSystems {
   static SNES: GameSystem = {
     systemFullName: "Super Nintendo Entertainment System",
@@ -23,14 +29,3 @@ export class GameSystems {
     extensions: ["gen", "smd", "md"],
   };
 }
-
-/**
- * since enums cannot have custom datatypes,
- * use (GameSystems.SNES as unknown as GameSystemDetails) to work with the IDEs hints
- */
-/*
-export enum GameSystem {
-  SNES = Object(SNESDetails),
-  MEGADRIVE = Object(MEGADRIVEDetails),
-}
-*/

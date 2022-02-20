@@ -1,150 +1,70 @@
-import { Assets } from "./scraping_engines/Assets";
+import { Assets } from "./structures/Assets";
 import screenscraper from "./scraping_engines/screenscraper";
-import { GameSystems, GameSystem } from "./scraping_engines/GameSystems";
-
-const fs = require("fs").promises;
+import { GameSystems, GameSystem } from "./structures/GameSystems";
+import { ScrapingEngine } from "./scraping_engines/ScrapingEngines";
+import { Frontends } from "./frontends/Frontends";
+import { createPlaylistFilesAndDownloadAssets } from "./frontends/retroarch";
+import {
+  gameSystemFromRomExtension,
+  gameSystemFromRomFolderRoute,
+  getGamesRouteList,
+  romRouteToPlayListName,
+} from "./frontends/genericFunctions";
+import { GameCompleteInformation } from "./structures/GameCompleteInformation";
 const path = require("path");
-
-enum ScrapingEngine {
-  screenscraper = "screenscraper",
-}
-
-enum Frontend {
-  retroarch = "retroarch",
-}
-
 //TODO: unzip, unrar, etc. autosort roms
+//todo: custom systems to define
+
+const dummyAsset = {
+  gameName: "Aero the Acro-Bat 2",
+  gameDescription:
+    "In the sequel to Aero the Acro-Bat you have to defeat evil industrialist Edgar Ektor once again. He is back and again with bad ideas, so you -  in the role of Aero - have to find and destroy him before he carries out his diabolical &quot;Plan B&quot;. Like in the last installment, you have to jump, escape lethal obstacles and progress in time. This game features more moves for Aero, more mechanisms to use and more items to collect.",
+  snapURL:
+    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2627&media=ss(wor)",
+  snapCRC: "044a0c7a",
+  titleURL:
+    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2627&media=sstitle(wor)",
+  titleCRC: "7868bc7f",
+  boxartURL:
+    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2627&media=box-2D(us)",
+  boxartCRC: "3d97b577",
+  bezelURL:
+    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2627&media=bezel-16-9(us)",
+  bezelCRC: "6b41b06e",
+  deducedGameSystem: GameSystems.SNES,
+};
 const scrapeFolder = async (
   folderPath: string,
   scrapingEngine: string = ScrapingEngine.screenscraper,
-  frontend: Frontend = Frontend.retroarch
+  frontend: Frontends = Frontends.retroarch
 ) => {
-  const fileRouteList = await getFileRouteList(folderPath);
-
-  foldersToPlayList();
-  return;
+  const gameCompleteList: Array<GameCompleteInformation> = [];
+  const fileRouteList = await getGamesRouteList(folderPath);
   for (let fileRoute of fileRouteList) {
-    const gameSystem =
-      gameSystemFromExtension(fileRoute) || gameSystemFromRoute(fileRoute);
-    //todo: crc
+    let gameItemInformation: GameCompleteInformation = { gameRoute: fileRoute };
 
+    /*
     const assets = await scrapeRom(
       path.basename(fileRoute),
       undefined,
-      gameSystem,
+      gameSystemFromRomFolderRoute(fileRoute) ||
+        gameSystemFromRomExtension(fileRoute) ||
+        undefined,
       undefined,
       undefined,
       scrapingEngine
     );
+*/
+    const assets = dummyAsset;
+    gameItemInformation.gameAssets = assets;
+    gameItemInformation.gameGameSystem =
+      gameSystemFromRomFolderRoute(fileRoute) ||
+      gameSystemFromRomExtension(fileRoute) ||
+      assets?.deducedGameSystem;
 
-    if (!assets) continue;
-
-    console.log(
-      retroArchPlaylistItem(
-        fileRoute,
-        assets,
-        (gameSystem as unknown as GameSystem).systemShortName
-      )
-    );
+    gameCompleteList.push(gameItemInformation);
   }
-};
-
-/**
- * takes a folder name like "snes/beat'em up/2 players/rom.zip"
- * to "Snes - Beat'em Up 2 players"
- */
-const foldersToPlayList = (
-  filefullRoute: string = "snes/beat'em up/2 players/rom.zip"
-): string => {
-  const playlistName = "";
-  let systemFolderFound = false;
-
-  console.log(GameSystems);
-
-  for (let folderName of path.dirname(filefullRoute).split("/")) {
-    if (!systemFolderFound) {
-      continue;
-    }
-    console.log(folderName);
-  }
-
-  return playlistName;
-};
-
-const folderNameToGameSystem = (folderName: string): GameSystem | undefined => {
-  return;
-};
-
-const retroArchPlaylistItem = (
-  romRoute: string,
-  assets: Assets | undefined,
-  playlistName: string,
-  crc: string | undefined = undefined
-): object => {
-  return {
-    path: romRoute,
-    label: assets?.gameName,
-    core_path: "DETECT",
-    core_name: "DETECT",
-    crc32: crc ? crc + "|crc" : "DETECT",
-    db_name: playlistName + ".lpl",
-  };
-};
-
-//todo: generalize
-const gameSystemFromRoute = (fileRoute: string): GameSystem | undefined => {
-  if (path.dirname(fileRoute).includes(GameSystems.SNES.defaultFolder))
-    return GameSystems.SNES;
-  if (path.dirname(fileRoute).includes(GameSystems.MEGADRIVE.defaultFolder))
-    return GameSystems.MEGADRIVE;
-};
-
-const gameSystemFromExtension = (fileRoute: string): GameSystem | undefined => {
-  if (
-    GameSystems.SNES.extensions.includes(path.extname(fileRoute).substring(1))
-  )
-    return GameSystems.SNES;
-  if (
-    GameSystems.MEGADRIVE.extensions.includes(
-      path.extname(fileRoute).substring(1)
-    )
-  )
-    return GameSystems.MEGADRIVE;
-};
-
-/**
- * returns array like [./file1.zip, ./folder1/file2.sfc, ./f3/folder2/file3.srm]
- * ignores empty folders
- * works recursively
- * todo: get it working on DOS based systems (win)
- */
-const getFileRouteList = async (rootFolderRoute: string) => {
-  const finalFileRouteList: Array<string> = [];
-  try {
-    //todo: fix things like rootfolder//filename.ext to rootfolder/filename.ext
-    const currentFolderNameList = await fs.readdir(rootFolderRoute);
-    const currentFolderRouteList = currentFolderNameList.map(
-      (fileOrFolderName: string) => rootFolderRoute + "/" + fileOrFolderName
-    );
-
-    for (let fileOrFolderRoute of currentFolderRouteList) {
-      const isFileOrFolder = await fs.stat(fileOrFolderRoute);
-
-      if (isFileOrFolder.isFile()) finalFileRouteList.push(fileOrFolderRoute);
-
-      if (isFileOrFolder.isDirectory()) {
-        const subFolderFileRouteList = await getFileRouteList(
-          fileOrFolderRoute
-        );
-        subFolderFileRouteList.forEach((subFolderFileRoute) =>
-          finalFileRouteList.push(subFolderFileRoute)
-        );
-      }
-    }
-  } catch (error) {
-    console.error(error + "/n Is the file open?");
-  }
-  return finalFileRouteList;
+  createPlaylistFilesAndDownloadAssets(gameCompleteList);
 };
 
 const scrapeRom = async (

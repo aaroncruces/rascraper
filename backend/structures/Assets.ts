@@ -1,3 +1,5 @@
+import { GameSystem } from "./GameSystems";
+
 /**
  * A list of URL containing assets like images or videos,
  * used in a game frontend .
@@ -15,4 +17,5 @@ export interface Assets {
   boxartCRC?: string;
   bezelURL?: string;
   bezelCRC?: string;
+  deducedGameSystem?: GameSystem;
 }
