@@ -1,6 +1,5 @@
-import { gameSystemFromScreenScraperID } from "../frontends/genericFunctions";
 import { Assets } from "../structures/Assets";
-import { GameSystem } from "../structures/GameSystems";
+import { GameSystem, GameSystems } from "../structures/GameSystems";
 import { ScrapeFunction } from "../structures/ScrapeFunction";
 
 const axios = require("axios");
@@ -145,3 +144,14 @@ const getRegionFromResponse = (responseObject: any) =>
 const getIDFromResponse = (responseObject: any): number =>
   responseObject.response.jeu.systeme.id;
 export default scrape;
+
+export const gameSystemFromScreenScraperID = (
+  id: number
+): GameSystem | undefined => {
+  for (let gameSystemSelector in GameSystems) {
+    const gameSystemIterated: GameSystem =
+      //@ts-ignore because I don't know how to iterate "properly" the static members of a class
+      GameSystems[gameSystemSelector] as GameSystem;
+    if (gameSystemIterated.screenscraperID == id) return gameSystemIterated;
+  }
+};
