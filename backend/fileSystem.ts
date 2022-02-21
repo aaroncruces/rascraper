@@ -3,12 +3,22 @@ const fs = require("fs").promises;
 const path = require("path");
 
 export const createFolder = async (folderpath: string) => {
+  await fs.mkdir(folderpath, { recursive: true });
+  const stat = await fs.stat(folderpath);
+  return stat.isDirectory();
+};
+
+export const deleteFolder = async (folderpath: string) => {
+  await fs.rm(folderpath, { recursive: true, force: true });
   try {
-    await fs.mkdir(folderpath, { recursive: true });
-  } catch (error) {
-    console.log(error);
+    await fs.access(folderpath);
+    return false;
+  } catch {
+    return true;
   }
 };
+
+export const createTextFile = () => {};
 
 export const gameSystemFromRomFolderRoute = (
   fileRoute: string

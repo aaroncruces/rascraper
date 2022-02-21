@@ -11,16 +11,20 @@ const testFolder = "./romsandbox";
 //createFolder(testFolder + "/created/");
 const jest = require("jest");
 
-const options = {
-  projects: [__dirname],
-  silent: true,
-};
+const run = async () => {
+  try {
+    const jestOptions = {
+      projects: [__dirname],
+      silent: true,
+    };
+    const jestResult = await jest.runCLI(jestOptions, jestOptions.projects);
+    console.log(jestResult);
 
-jest
-  .runCLI(options, options.projects)
-  .then((success: any) => {
-    console.log(success);
-  })
-  .catch((failure: any) => {
+    //if jest results ok. run rest of things
+    if (true) {
+    }
+  } catch (error) {
     console.error("failure");
-  });
+  }
+};
+run();

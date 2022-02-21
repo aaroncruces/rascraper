@@ -85,7 +85,3 @@ const scrapeRom = async (
     return result;
   }
 };
-module.exports = {
-  scrapeRom,
-  scrapeFolder,
-};
