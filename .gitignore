@@ -2,5 +2,7 @@ api_examples.txt
 node_modules
 configs/screenscraper_dev_credentials.js
 **/*.js
+!jest.config.js
+git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
 package-lock.json
 testsandbox
