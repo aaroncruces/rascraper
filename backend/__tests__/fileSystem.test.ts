@@ -3,29 +3,18 @@ import {
   createTextFileFromObject,
   deleteFileOrFolder,
   readTextFileAsObject,
-} from "../backend/fileSystem";
+} from "../fileSystem";
+import {
+  getGlobalFSMock,
+  insertAndRetreiveMockRouteIntoObject,
+  resetGlobalFSMock,
+} from "../__mocks__/fileSystem";
 
-const globalAccess: any = global;
-
-jest.mock("../backend/fileSystem", () => {
-  const mockCreateFolder = jest.fn(async (folderRoute: string) => {
-    console.log("mockCreateFolder");
-    if (!globalAccess.globalFSMock) globalAccess.globalFSMock = {};
-    let globalFSMock = globalAccess.globalFSMock;
-    //todo: insert the "folder" in globalFSMock
-    return true;
-  });
-  const originalModule = jest.requireActual("../backend/fileSystem.ts");
-  return {
-    __esModule: true,
-    ...originalModule,
-    createFolder: mockCreateFolder,
-  };
-});
-describe.skip("temporarily skipping already tested: create and delete folders and text files", () => {
+jest.mock("../fileSystem");
+describe("create and delete folders and text files. using mocks", () => {
   //todo: mock this when tested
   beforeAll(() => {
-    //todo: delete all folders and files in ./testsandbox
+    resetGlobalFSMock();
   });
   it("creates a folder  called jestfoldertest in ./testsandbox", async () => {
     await expect(
@@ -43,6 +32,142 @@ describe.skip("temporarily skipping already tested: create and delete folders an
     await expect(
       deleteFileOrFolder("./testsandbox/jestfoldertest")
     ).resolves.toBeTruthy();
+  });
+
+  afterAll(() => {
+    console.log(getGlobalFSMock());
+  });
+});
+
+describe.skip("Custom Mock FS. wont use the node module mock-fs, since it keeps breaking jest in this project", () => {
+  it("inserts nothing in the object {} given empty or wrong string", () => {
+    const rootMockObjectTest = {};
+    expect(
+      insertAndRetreiveMockRouteIntoObject([""], rootMockObjectTest)
+    ).toBeUndefined();
+  });
+
+  it("inserts a file called file1.txt ", () => {
+    const rootMockObjectTest = {};
+    expect(
+      insertAndRetreiveMockRouteIntoObject(["file1.txt"], rootMockObjectTest)
+    ).toEqual({});
+  });
+
+  it("inserts a file called file1.txt more than once ", () => {
+    const rootMockObjectTest = {};
+    expect(
+      insertAndRetreiveMockRouteIntoObject(["file1.txt"], rootMockObjectTest)
+    ).toEqual({});
+    expect(
+      insertAndRetreiveMockRouteIntoObject(["file1.txt"], rootMockObjectTest)
+    ).toEqual({});
+  });
+
+  test("the return of a reference instead of a copy", () => {
+    const rootMockObjectTest = {};
+    const expectedStructure = { "file1.txt": { textvalue: "text" } };
+    const reference = insertAndRetreiveMockRouteIntoObject(
+      ["file1.txt"],
+      rootMockObjectTest
+    );
+    //@ts-ignore todo: define structure of global mock fs
+    reference.textvalue = "text";
+    expect(rootMockObjectTest).toEqual(expectedStructure);
+  });
+  test("the creation of a 2 deep structure inside folder1/file11.txt", () => {
+    const rootMockObjectTest = {};
+    const expectedStructure = { folder1: { "file11.txt": {} } };
+    insertAndRetreiveMockRouteIntoObject(
+      ["folder1", "file11.txt"],
+      rootMockObjectTest
+    );
+    expect(rootMockObjectTest).toEqual(expectedStructure);
+  });
+
+  test("the creation of a 2 deep structure inside folder1/file11.txt, an then folder1", () => {
+    const rootMockObjectTest = {};
+    const expectedStructure = { folder1: { "file11.txt": {} } };
+    insertAndRetreiveMockRouteIntoObject(
+      ["folder1", "file11.txt"],
+      rootMockObjectTest
+    );
+    insertAndRetreiveMockRouteIntoObject(["folder1"], rootMockObjectTest);
+    expect(rootMockObjectTest).toEqual(expectedStructure);
+  });
+
+  test("the creation of a 2 deep structure inside folder1/file11.txt, an then folder1/file12.txt", () => {
+    const rootMockObjectTest = {};
+    const expectedStructure = {
+      folder1: { "file11.txt": {}, "file12.txt": {} },
+    };
+    insertAndRetreiveMockRouteIntoObject(
+      ["folder1", "file11.txt"],
+      rootMockObjectTest
+    );
+    insertAndRetreiveMockRouteIntoObject(
+      ["folder1", "file12.txt"],
+      rootMockObjectTest
+    );
+    expect(rootMockObjectTest).toEqual(expectedStructure);
+  });
+
+  test("the creation of a 2 deep structure inside folder1/file11.txt, an then folder1/file12.txt, an then an adyacent folder folder2/file21.txt", () => {
+    const rootMockObjectTest = {};
+    const expectedStructure = {
+      folder1: { "file11.txt": {}, "file12.txt": {} },
+      folder2: { "file21.txt": {} },
+    };
+    insertAndRetreiveMockRouteIntoObject(
+      ["folder1", "file11.txt"],
+      rootMockObjectTest
+    );
+    insertAndRetreiveMockRouteIntoObject(
+      ["folder1", "file12.txt"],
+      rootMockObjectTest
+    );
+    insertAndRetreiveMockRouteIntoObject(
+      ["folder2", "file21.txt"],
+      rootMockObjectTest
+    );
+    expect(rootMockObjectTest).toEqual(expectedStructure);
+  });
+
+  test("the return of a reference to an existing object", () => {
+    const rootMockObjectTest = {};
+    // to be found in /folder1/subfolder11
+    const expectedStructure = {
+      "file111.txt": {},
+    };
+    insertAndRetreiveMockRouteIntoObject(
+      ["folder1", "file11.txt"],
+      rootMockObjectTest
+    );
+    insertAndRetreiveMockRouteIntoObject(
+      ["folder1", "file12.txt"],
+      rootMockObjectTest
+    );
+    insertAndRetreiveMockRouteIntoObject(
+      ["folder2", "file21.txt"],
+      rootMockObjectTest
+    );
+    insertAndRetreiveMockRouteIntoObject(
+      ["folder1", "subfolder11", "file111.txt"],
+      rootMockObjectTest
+    );
+    // search on /folder1/subfolder11
+    const referenceSearched = insertAndRetreiveMockRouteIntoObject(
+      ["folder1", "subfolder11"],
+      rootMockObjectTest
+    );
+    expect(referenceSearched).toEqual(expectedStructure);
+  });
+});
+
+describe.skip("temporarily skipping already tested: create and delete folders and text files", () => {
+  //todo: mock this when tested
+  beforeAll(() => {
+    //todo: delete all folders and files in ./testsandbox
   });
 
   it("deletes a nonexistant folder or file to try idempotency", async () => {
@@ -80,19 +205,15 @@ describe.skip("temporarily skipping already tested: create and delete folders an
       deleteFileOrFolder("./testsandbox/jestfiletest.json")
     ).resolves.toBeTruthy();
   });
-});
 
-describe("create and delete folders and text files", () => {
+  it("deletes file created (jestfiletest.json)", async () => {
+    await expect(
+      deleteFileOrFolder("./testsandbox/jestfiletest.json")
+    ).resolves.toBeTruthy();
+  });
   it("creates a folder  called jestfoldertest in ./testsandbox", async () => {
     await expect(
       createFolder("./testsandbox/jestfoldertest")
     ).resolves.toBeTruthy();
   });
-
-  //test writting nothing
-  //write object
-  //read objct
-  //it
-  //it creates a folder named jestfilefolder having a file with the same name
-  //it does the same thing with a file
 });
