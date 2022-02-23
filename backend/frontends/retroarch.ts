@@ -4,7 +4,7 @@
 import {
   gameSystemFromRomExtension,
   gameSystemFromRomFolderRoute,
-} from "../fileSystem";
+} from "../gameFileSystemAndRoutes";
 import { GameCompleteInformation } from "../structures/GameCompleteInformation";
 import { GameSystem } from "../structures/GameSystems";
 

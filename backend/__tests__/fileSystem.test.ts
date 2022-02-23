@@ -9,37 +9,11 @@ import {
   insertAndRetreiveMockRouteIntoObject,
   resetGlobalFSMock,
 } from "../__mocks__/fileSystem";
-
+//disable if want to test the real thing.
+//cannot be put in a code block {} of any type (for some weird reason I don't understand)
 jest.mock("../fileSystem");
-describe("create and delete folders and text files. using mocks", () => {
-  //todo: mock this when tested
-  beforeAll(() => {
-    resetGlobalFSMock();
-  });
-  it("creates a folder  called jestfoldertest in ./testsandbox", async () => {
-    await expect(
-      createFolder("./testsandbox/jestfoldertest")
-    ).resolves.toBeTruthy();
-  });
 
-  it("creates the same folder again", async () => {
-    await expect(
-      createFolder("./testsandbox/jestfoldertest")
-    ).resolves.toBeTruthy();
-  });
-
-  it("deletes the folder created", async () => {
-    await expect(
-      deleteFileOrFolder("./testsandbox/jestfoldertest")
-    ).resolves.toBeTruthy();
-  });
-
-  afterAll(() => {
-    console.log(getGlobalFSMock());
-  });
-});
-
-describe.skip("Custom Mock FS. wont use the node module mock-fs, since it keeps breaking jest in this project", () => {
+describe("Custom Mock FS. wont use the node module mock-fs, since it keeps breaking jest in this project", () => {
   it("inserts nothing in the object {} given empty or wrong string", () => {
     const rootMockObjectTest = {};
     expect(
@@ -164,10 +138,40 @@ describe.skip("Custom Mock FS. wont use the node module mock-fs, since it keeps 
   });
 });
 
-describe.skip("temporarily skipping already tested: create and delete folders and text files", () => {
-  //todo: mock this when tested
+describe("create and delete folders and text files", () => {
+  //todo: cleanup if not mock
   beforeAll(() => {
-    //todo: delete all folders and files in ./testsandbox
+    resetGlobalFSMock();
+  });
+  afterAll(() => {
+    console.log(getGlobalFSMock());
+  });
+  it("creates a folder  called jestfoldertest in ./testsandbox", async () => {
+    await expect(
+      createFolder("./testsandbox/jestfoldertest")
+    ).resolves.toBeTruthy();
+  });
+
+  it("creates the same folder again", async () => {
+    await expect(
+      createFolder("./testsandbox/jestfoldertest")
+    ).resolves.toBeTruthy();
+  });
+
+  it("deletes the folder created", async () => {
+    await expect(
+      deleteFileOrFolder("./testsandbox/jestfoldertest")
+    ).resolves.toBeTruthy();
+  });
+
+  it("creates a text file named jestfiletest.json with a json object", async () => {
+    const testObjectToBeWritten = { hello: "World", hola: "mundo" };
+    await expect(
+      createTextFileFromObject(
+        "./testsandbox/jestfiletest.json",
+        testObjectToBeWritten
+      )
+    ).resolves.toBeTruthy();
   });
 
   it("deletes a nonexistant folder or file to try idempotency", async () => {
@@ -176,22 +180,20 @@ describe.skip("temporarily skipping already tested: create and delete folders an
     ).resolves.toBeTruthy();
   });
 
-  let testObjectToBeWritten = { hello: "World", hola: "mundo" };
-  it("creates a text file named jestfiletest.json with a json object", async () => {
-    await expect(
-      createTextFileFromObject(
-        "./testsandbox/jestfiletest.json",
-        testObjectToBeWritten
-      )
-    ).resolves.toBeTruthy();
-  });
   it("reads the text file previously created (jestfiletest.json) and gives the result as object", async () => {
+    resetGlobalFSMock();
+    const testObjectToBeWritten = { hello: "World", hola: "mundo" };
+    await createTextFileFromObject(
+      "./testsandbox/jestfiletest.json",
+      testObjectToBeWritten
+    );
     await expect(
       readTextFileAsObject("./testsandbox/jestfiletest.json")
     ).resolves.toEqual(testObjectToBeWritten);
   });
 
   it("Creates the same file to test idempotency", async () => {
+    const testObjectToBeWritten = { hello: "World", hola: "mundo" };
     await expect(
       createTextFileFromObject(
         "./testsandbox/jestfiletest.json",
@@ -203,17 +205,6 @@ describe.skip("temporarily skipping already tested: create and delete folders an
   it("deletes file created (jestfiletest.json)", async () => {
     await expect(
       deleteFileOrFolder("./testsandbox/jestfiletest.json")
-    ).resolves.toBeTruthy();
-  });
-
-  it("deletes file created (jestfiletest.json)", async () => {
-    await expect(
-      deleteFileOrFolder("./testsandbox/jestfiletest.json")
-    ).resolves.toBeTruthy();
-  });
-  it("creates a folder  called jestfoldertest in ./testsandbox", async () => {
-    await expect(
-      createFolder("./testsandbox/jestfoldertest")
     ).resolves.toBeTruthy();
   });
 });

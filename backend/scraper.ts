@@ -8,7 +8,7 @@ import {
   gameSystemFromRomExtension,
   gameSystemFromRomFolderRoute,
   getGamesRouteList,
-} from "./fileSystem";
+} from "./gameFileSystemAndRoutes";
 import { GameCompleteInformation } from "./structures/GameCompleteInformation";
 const path = require("path");
 //TODO: unzip, unrar, etc. autosort roms

@@ -64,7 +64,14 @@ export const deleteFileOrFolder = async (
   folderpath: string
 ): Promise<boolean> => {
   const rootObject = getGlobalFSMock();
-  const folderchain = folderpath.split("/");
+  const folderchain = folderpath
+    .split("/")
+    .filter(
+      (foldeitem) =>
+        foldeitem.trim() != "" &&
+        foldeitem.trim() != ".." &&
+        foldeitem.trim() != "."
+    );
   const itemToDelete = folderchain.pop();
   let referenceToContainingFolder: object | undefined;
   if (folderchain.length > 0)
@@ -76,4 +83,33 @@ export const deleteFileOrFolder = async (
   //@ts-ignore
   delete referenceToContainingFolder[itemToDelete];
   return true;
+};
+
+export const createTextFileFromObject = async (
+  fileRoute: string,
+  objectToBeWritten: object
+): Promise<boolean> => {
+  const rootObject = getGlobalFSMock();
+  const folderchain = fileRoute.split("/");
+  const value = JSON.stringify(objectToBeWritten);
+  const reference = insertAndRetreiveMockRouteIntoObject(
+    folderchain,
+    rootObject
+  );
+  //@ts-ignore
+  reference["value"] = value;
+  return true;
+};
+
+export const readTextFileAsObject = async (
+  fileRoute: string
+): Promise<object> => {
+  const rootObject = getGlobalFSMock();
+  const folderchain = fileRoute.split("/");
+  const reference = insertAndRetreiveMockRouteIntoObject(
+    folderchain,
+    rootObject
+  );
+  //@ts-ignore
+  return JSON.parse(reference.value);
 };

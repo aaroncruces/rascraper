@@ -4,6 +4,18 @@
   "description": "scraper for retroarch and other systems",
   "main": "app.js",
   "type": "commonjs",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "modulePathIgnorePatterns": [
+      "testsandbox"
+    ],
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true
+      }
+    }
+  },
   "scripts": {
     "start": "tsc && node app.js",
     "tsnode": "ts-node-dev --respawn --transpile-only --watch ./ app.ts",
