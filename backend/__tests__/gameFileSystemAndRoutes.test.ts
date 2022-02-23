@@ -12,13 +12,7 @@ import { GameSystems } from "../structures/GameSystems";
 import { resetGlobalFSMock } from "../__mocks__/fileSystem";
 
 jest.mock("../fileSystem");
-jest.mock("../gameFileSystemAndRoutes", () => ({
-  ...jest.requireActual("../gameFileSystemAndRoutes"),
-  //because of hoisitng, using commonjs instead of esmodules
-  getGamesRouteList: jest.fn(
-    require("../__mocks__/partial_gameFileSystemAndRoutes")
-  ),
-}));
+jest.mock("../gameFileSystemAndRoutes");
 
 describe("--> Getting the gamesystem with gameSystemFromRomFolderRoute ", () => {
   it("obtains a game as an instance of GameSystem from the route ./.../gamesystemfolder/.../rom", () => {

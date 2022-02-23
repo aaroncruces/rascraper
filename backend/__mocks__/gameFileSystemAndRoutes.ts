@@ -6,7 +6,7 @@ import {
 /**
  * mocks the functionality, beause is uses IO in the original
  */
-const getGamesRouteList = async (rootFolderRoute: string) => {
+export const getGamesRouteList = async (rootFolderRoute: string) => {
   const finalFileRouteList: Array<string> = [];
   const rootObject = getGlobalFSMock();
   const folderchain = rootFolderRoute.split("/");
@@ -35,5 +35,6 @@ const getGamesRouteList = async (rootFolderRoute: string) => {
   return finalFileRouteList;
 };
 
-//using commonjs because of the hoisting in jest.mock
-module.exports = getGamesRouteList;
+//forwarding non-mocked items
+export const { gameSystemFromRomFolderRoute, gameSystemFromRomExtension } =
+  jest.requireActual("../gameFileSystemAndRoutes");

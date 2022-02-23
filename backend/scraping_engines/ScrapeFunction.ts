@@ -1,6 +1,9 @@
 import { Assets } from "../structures/Assets";
 import { GameSystem } from "../structures/GameSystems";
 
+/**
+ * interface on wich all scraping engines have to comply
+ */
 export interface ScrapeFunction {
   (
     romName: string,
