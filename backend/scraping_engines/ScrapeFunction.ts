@@ -1,5 +1,5 @@
-import { Assets } from "./Assets";
-import { GameSystem } from "./GameSystems";
+import { Assets } from "../structures/Assets";
+import { GameSystem } from "../structures/GameSystems";
 
 export interface ScrapeFunction {
   (

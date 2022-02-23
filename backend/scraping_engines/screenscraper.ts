@@ -1,6 +1,6 @@
 import { Assets } from "../structures/Assets";
 import { GameSystem, GameSystems } from "../structures/GameSystems";
-import { ScrapeFunction } from "../structures/ScrapeFunction";
+import { ScrapeFunction } from "./ScrapeFunction";
 
 const axios = require("axios");
 
