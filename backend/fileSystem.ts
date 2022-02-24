@@ -40,3 +40,8 @@ export const readTextFileAsObject = async (
   const textResult = await fs.readFile(fileRoute);
   return JSON.parse(textResult);
 };
+
+export const getCRCFromFile = async (): Promise<string> => {
+  //todo: get CRC from filesystem
+  return "";
+};

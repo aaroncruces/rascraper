@@ -10,11 +10,13 @@ import {
 import { getObjectFromApi } from "../apiRequest";
 
 /**
- * if customRegion is undefined, it will get the region asset of the rom itself or the first one if not
+ * scrapes a single rom from screenscraper.fr
  * @param romName name to be searched online
+ * @param romCRC Screenscraper wont use crc, but some other api could use it
+ * @param gamesystem To distinguish the system of the rom, necesary in screenscraper, since it wont get the system only by the extension
  * @param language, language of the descriptions
- * @param customRegion For assets of other regions (like jp for an us game)
- * @returns the asset of the game, or undefined
+ * @param customRegion For assets of other regions (like jp for an us game). if  undefined, it will get the region from the api and store in the field "gameAssets.deducedGameSystem"
+ * @returns the asset of the game or {}
  */
 const scrape: ScrapeFunction = async (
   romName: string,

@@ -113,3 +113,8 @@ export const readTextFileAsObject = async (
   //@ts-ignore
   return JSON.parse(reference.value);
 };
+
+export const getCRCFromFile = async (): Promise<string> => {
+  //todo: find crc fom list
+  return "";
+};

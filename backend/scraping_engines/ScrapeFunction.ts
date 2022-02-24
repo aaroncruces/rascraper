@@ -11,5 +11,5 @@ export interface ScrapeFunction {
     gamesystem?: GameSystem | undefined,
     language?: string | undefined,
     customRegion?: string | undefined
-  ): Promise<Assets | undefined>;
+  ): Promise<Assets>;
 }

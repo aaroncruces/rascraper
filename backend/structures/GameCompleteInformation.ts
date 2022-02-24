@@ -3,6 +3,6 @@ import { GameSystem } from "./GameSystems";
 
 export interface GameCompleteInformation {
   gameRoute: string;
-  gameAssets?: Assets | undefined;
-  gameGameSystem?: GameSystem | undefined;
+  gameAssets?: Assets;
+  gameGameSystem?: GameSystem;
 }
