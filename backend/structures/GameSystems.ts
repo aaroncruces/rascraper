@@ -28,4 +28,12 @@ export class GameSystems {
     screenscraperID: 1,
     extensions: ["gen", "smd", "md"],
   };
+
+  static NEOGEO: GameSystem = {
+    systemFullName: "Neo Geo",
+    systemShortName: "Neo-Geo",
+    defaultFolder: "neogeo",
+    screenscraperID: 142,
+    extensions: ["zip"],
+  };
 }

@@ -1,45 +1,34 @@
 import { Assets } from "../structures/Assets";
 import { GameSystem, GameSystems } from "../structures/GameSystems";
 import { ScrapeFunction } from "./ScrapeFunction";
-
-const axios = require("axios");
-
-const {
+import axios from "axios";
+import {
   devid,
   devpassword,
-} = require("./../../configs/screenscraper_dev_credentials");
-const softname = "rascraper";
+  softname,
+} from "../../configs/secret/screenscraper_dev_credentials";
+import { getObjectFromApi } from "../apiRequest";
 
-//TODO: GET AVAILABLE REGIONS TO SCRAPE
 /**
  * if customRegion is undefined, it will get the region asset of the rom itself or the first one if not
  * @param romName name to be searched online
  * @param language, language of the descriptions
  * @param customRegion For assets of other regions (like jp for an us game)
- * @returns
+ * @returns the asset of the game, or undefined
  */
 const scrape: ScrapeFunction = async (
   romName: string,
   romCRC?: string | undefined,
-  gamesystem: GameSystem | undefined = undefined,
+  gamesystem?: GameSystem | undefined,
   language: string = "en",
-  customRegion: string | undefined = undefined
+  customRegion?: string | undefined
 ) => {
   let gameSystemIDParam = "";
   if (gamesystem) {
     gameSystemIDParam = "&systemeid=" + gamesystem.screenscraperID.toString();
   }
-
-  const sourceURL = `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=rascraper&output=json&romtype=rom${gameSystemIDParam}&romnom=${romName}`;
-  //console.log(sourceURL);
-  let response;
-  try {
-    response = await axios.get(sourceURL);
-  } catch (error) {
-    return;
-  }
-
-  const responseObject = response.data;
+  const sourceURL = `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&output=json&romtype=rom${gameSystemIDParam}&romnom=${romName}`;
+  const responseObject = await getObjectFromApi(sourceURL);
 
   let gameAssets: Assets = {};
 
@@ -143,11 +132,8 @@ const getRegionFromResponse = (responseObject: any) =>
 
 const getIDFromResponse = (responseObject: any): number =>
   responseObject.response.jeu.systeme.id;
-export default scrape;
 
-export const gameSystemFromScreenScraperID = (
-  id: number
-): GameSystem | undefined => {
+const gameSystemFromScreenScraperID = (id: number): GameSystem | undefined => {
   for (let gameSystemSelector in GameSystems) {
     const gameSystemIterated: GameSystem =
       //@ts-ignore because I don't know how to iterate "properly" the static members of a class
@@ -155,3 +141,5 @@ export const gameSystemFromScreenScraperID = (
     if (gameSystemIterated.screenscraperID == id) return gameSystemIterated;
   }
 };
+
+export default scrape;
