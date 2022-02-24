@@ -8,7 +8,7 @@ export const getObjectFromApi = async (sourceURL: string): Promise<object> => {
     const response = await axios.get(sourceURL);
     if (response?.data) return response.data;
   } catch (error) {
-    console.error(error);
+    // console.error("error");
   }
   return {};
 };

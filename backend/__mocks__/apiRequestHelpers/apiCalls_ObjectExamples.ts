@@ -18,10 +18,10 @@ export const apiCallsExamples: Array<objectExample> = [
   },
   {
     url: `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&output=json&romtype=rom&systemeid=4&romnom=Aero%20the%20Acro-Bat%20(USA).sfc`,
-    objectReturned: aeromega_ss,
+    objectReturned: aerosnes_ss,
   },
   {
-    url: `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&output=json&romtype=rom&&systemeid=1&romnom=Aero%20the%20Acro-Bat%20(USA)`,
-    objectReturned: aerosnes_ss,
+    url: `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&output=json&romtype=rom&systemeid=1&romnom=Aero%20the%20Acro-Bat%20(USA).sfc`,
+    objectReturned: aeromega_ss,
   },
 ];

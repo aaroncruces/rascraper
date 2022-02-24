@@ -27,8 +27,11 @@ const scrape: ScrapeFunction = async (
   if (gamesystem) {
     gameSystemIDParam = "&systemeid=" + gamesystem.screenscraperID.toString();
   }
+
   const sourceURL = `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&output=json&romtype=rom${gameSystemIDParam}&romnom=${romName}`;
-  const responseObject = await getObjectFromApi(sourceURL);
+  const responseObject = await getObjectFromApi(encodeURI(sourceURL));
+  //@ts-ignore
+  if (!responseObject.response) return {};
 
   let gameAssets: Assets = {};
 
