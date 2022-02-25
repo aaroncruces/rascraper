@@ -1,7 +1,12 @@
 import {
+  CRCTest_filename,
+  knowcrc,
+} from "../../mockExampleObjects/filesystemHelpers/knownCRCExamples";
+import {
   createFolder,
   createTextFileFromObject,
   deleteFileOrFolder,
+  getCRCFromFile,
   readTextFileAsObject,
 } from "../fileSystem";
 import {
@@ -13,8 +18,8 @@ import {
 //cannot be put in a code block {} of any type (for some weird reason I don't understand)
 jest.mock("../fileSystem");
 
-describe("Custom Mock FS. wont use the node module mock-fs, since it keeps breaking jest in this project", () => {
-  it("inserts nothing in the object {} given empty or wrong string", () => {
+describe("--> Testing custom Mock FS. I wont use the node module mock-fs, since it keeps breaking jest in this project", () => {
+  it("Inserts nothing in the object {} given empty or wrong string", () => {
     const rootMockObjectTest = {};
     expect(
       insertAndRetreiveMockRouteIntoObject([""], rootMockObjectTest)
@@ -138,7 +143,7 @@ describe("Custom Mock FS. wont use the node module mock-fs, since it keeps break
   });
 });
 
-describe("create and delete folders and text files", () => {
+describe("--> Create and delete folders and text files", () => {
   //todo: cleanup if not mock
   beforeAll(() => {
     resetGlobalFSMock();
@@ -204,5 +209,19 @@ describe("create and delete folders and text files", () => {
     await expect(
       deleteFileOrFolder("./testsandbox/jestfiletest.json")
     ).resolves.toBeTruthy();
+  });
+});
+//todo: mock crc
+describe("--> Get CRC from files. Make sure to have files with known crc", () => {
+  it("Gets a crc from a known example", async () => {
+    const testFileName = CRCTest_filename;
+    const fileRoute =
+      "src/mockExampleObjects/filesystemHelpers/" + testFileName;
+    const knowncrcFromTestFile = knowcrc.find(
+      (crcpair) => crcpair.filename == testFileName
+    )?.crc;
+    await expect(getCRCFromFile(fileRoute)).resolves.toEqual(
+      knowncrcFromTestFile
+    );
   });
 });

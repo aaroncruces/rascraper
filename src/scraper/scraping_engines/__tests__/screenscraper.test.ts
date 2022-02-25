@@ -14,8 +14,8 @@ import {
 } from "../../../mockExampleObjects/screenscraper/assets/smb2_asset";
 import scrape_screenscraper from "../screenscraper";
 
-//jest.mock("../../../io/apiRequest");
-jest.setTimeout(500000); //if testing screenscraper online (goes really slow sometimes)
+jest.mock("../../../io/apiRequest");
+//jest.setTimeout(500000); //if testing screenscraper online (goes really slow sometimes)
 
 describe("--> Screenscraper engine", () => {
   it("Obtains the assets of the game metal slug", async () => {

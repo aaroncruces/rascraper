@@ -26,6 +26,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.0",
+    "crc32": "^0.2.2",
     "electron": "^17.0.0",
     "minimist": "^1.2.5"
   },

@@ -1,6 +1,6 @@
-const fs = require("fs").promises;
-const path = require("path");
-
+const fs = require("fs").promises,
+  path = require("path"),
+  crc32 = require("crc32");
 export const createFolder = async (folderpath: string): Promise<boolean> => {
   await fs.mkdir(folderpath, { recursive: true });
   const stat = await fs.stat(folderpath);
@@ -40,7 +40,7 @@ export const readTextFileAsObject = async (
   return JSON.parse(textResult);
 };
 
-export const getCRCFromFile = async (): Promise<string> => {
-  //todo: get CRC from filesystem
-  return "";
+export const getCRCFromFile = async (fileRoute: string): Promise<string> => {
+  const crcResult = await fs.readFile(fileRoute);
+  return crc32(crcResult);
 };

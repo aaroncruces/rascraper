@@ -1,5 +1,7 @@
-//todo: define ts structure of mock fs
+import { knowcrc } from "../../mockExampleObjects/filesystemHelpers/knownCRCExamples";
 
+//todo: define ts structure of mock fs
+const path = require("path");
 const globalAccess: any = global;
 
 export const resetGlobalFSMock = () => (globalAccess.globalFSMock = {});
@@ -114,7 +116,5 @@ export const readTextFileAsObject = async (
   return JSON.parse(reference.value);
 };
 
-export const getCRCFromFile = async (): Promise<string> => {
-  //todo: find crc fom list
-  return "";
-};
+export const getCRCFromFile = async (fileRoute: string): Promise<string> =>
+  knowcrc.find((pair) => pair.filename == path.basename(fileRoute))?.crc || "";
