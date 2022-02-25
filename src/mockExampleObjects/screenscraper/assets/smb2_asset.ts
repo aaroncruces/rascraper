@@ -1,5 +1,10 @@
 import { Assets } from "../../../interfacesAndStructures/Assets";
 import { GameSystems } from "../../../interfacesAndStructures/GameSystems";
+import {
+  devid,
+  devpassword,
+  softname,
+} from "../../../../configs/secret/screenscraper_dev_credentials";
 
 export const smb2_SS_ExpectedAssets: Assets = {
   gameName: "Super Mario Bros. 2",
@@ -10,17 +15,13 @@ export const smb2_SS_ExpectedAssets: Assets = {
     "\n" +
     "Choose from the four characters, each differing in speed and jumping ability, and head on through 7 levels each filled with puzzles, bosses, bonus money, the always helpful mushroom, and invincible star, plus bombs and magic potions. \n" +
     "After each level, depending on the coins you collect, you can use them in the bonus game to collect extra lives.",
-  snapURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=ss(wor)",
+  snapURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=ss(wor)`,
   snapCRC: "1cacd396",
-  titleURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=sstitle(wor)",
+  titleURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=sstitle(wor)`,
   titleCRC: "9f3bace5",
-  boxartURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=box-2D(us)",
+  boxartURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=box-2D(us)`,
   boxartCRC: "2dfa9b08",
-  bezelURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=bezel-16-9(us)",
+  bezelURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=bezel-16-9(us)`,
   bezelCRC: "949b3649",
   deducedGameSystem: {
     systemFullName: "Nintendo Entertainment System",
@@ -37,17 +38,13 @@ export const smb2_fr_default_SS_ExpectedAssets: Assets = {
   gameDescription:
     "Mario est de retour! Plus grand et plus fort que jamais!\r\n" +
     "Il s'agit cette fois d'un combat sans merci pour libérer le royaume de Subcon du sortilège que lui a jeté le méchant Wart. Aidé de Mario, de Luigi, de Toad et de la Princesse, vous devez retrouver Wart dans des mondes bizarres aux niveaux multiples et le battre! Vous possédez cette fois un pouvoir très spécial - le pouvoir d'arracher- et, désormais, tout ce que vous trouvez vous sert d'arme. Mais prenez garde! Vous n'avez jamais encore eu affaire à de tels adversaires! Des Shyguy et des Tweeter! Des Ninji et des Beezo! Vous n'avez jamais vécu pareille aventure! Seule votre ruse et votre agilité peuvent vous sauver...",
-  snapURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=ss(wor)",
+  snapURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=ss(wor)`,
   snapCRC: "1cacd396",
-  titleURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=sstitle(wor)",
+  titleURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=sstitle(wor)`,
   titleCRC: "9f3bace5",
-  boxartURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=box-2D(us)",
+  boxartURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=box-2D(us)`,
   boxartCRC: "2dfa9b08",
-  bezelURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=bezel-16-9(us)",
+  bezelURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=bezel-16-9(us)`,
   bezelCRC: "949b3649",
   deducedGameSystem: GameSystems.NES,
 };
@@ -61,17 +58,13 @@ export const smb2_default_jp_SS_ExpectedAssets: Assets = {
     "\n" +
     "Choose from the four characters, each differing in speed and jumping ability, and head on through 7 levels each filled with puzzles, bosses, bonus money, the always helpful mushroom, and invincible star, plus bombs and magic potions. \n" +
     "After each level, depending on the coins you collect, you can use them in the bonus game to collect extra lives.",
-  snapURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=ss(wor)",
+  snapURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=ss(wor)`,
   snapCRC: "1cacd396",
-  titleURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=sstitle(jp)",
+  titleURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=sstitle(jp)`,
   titleCRC: "f5aae56b",
-  boxartURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=box-2D(jp)",
+  boxartURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=box-2D(jp)`,
   boxartCRC: "fd7e86f0",
-  bezelURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=bezel-16-9(us)",
+  bezelURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=bezel-16-9(us)`,
   bezelCRC: "949b3649",
   deducedGameSystem: {
     systemFullName: "Nintendo Entertainment System",
@@ -86,17 +79,13 @@ export const smb2_fr_jp_SS_ExpectedAssets: Assets = {
   gameDescription:
     "Mario est de retour! Plus grand et plus fort que jamais!\r\n" +
     "Il s'agit cette fois d'un combat sans merci pour libérer le royaume de Subcon du sortilège que lui a jeté le méchant Wart. Aidé de Mario, de Luigi, de Toad et de la Princesse, vous devez retrouver Wart dans des mondes bizarres aux niveaux multiples et le battre! Vous possédez cette fois un pouvoir très spécial - le pouvoir d'arracher- et, désormais, tout ce que vous trouvez vous sert d'arme. Mais prenez garde! Vous n'avez jamais encore eu affaire à de tels adversaires! Des Shyguy et des Tweeter! Des Ninji et des Beezo! Vous n'avez jamais vécu pareille aventure! Seule votre ruse et votre agilité peuvent vous sauver...",
-  snapURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=ss(wor)",
+  snapURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=ss(wor)`,
   snapCRC: "1cacd396",
-  titleURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=sstitle(jp)",
+  titleURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=sstitle(jp)`,
   titleCRC: "f5aae56b",
-  boxartURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=box-2D(jp)",
+  boxartURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=box-2D(jp)`,
   boxartCRC: "fd7e86f0",
-  bezelURL:
-    "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=3&jeuid=1248&media=bezel-16-9(us)",
+  bezelURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=bezel-16-9(us)`,
   bezelCRC: "949b3649",
   deducedGameSystem: GameSystems.NES,
 };

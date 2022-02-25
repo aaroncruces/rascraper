@@ -1,3 +1,9 @@
+import {
+  devid,
+  devpassword,
+  softname,
+} from "../../../../configs/secret/screenscraper_dev_credentials";
+
 export const aerosnes_ss = {
   header: {
     APIversion: "2.0",
@@ -129,7 +135,7 @@ export const aerosnes_ss = {
         {
           type: "sstitle",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=sstitle(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=sstitle(wor)`,
           region: "wor",
           crc: "6c45a0cb",
           md5: "f7fc164af3de9315672ee4d1332e72e0",
@@ -140,7 +146,7 @@ export const aerosnes_ss = {
         {
           type: "ss",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=ss(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=ss(wor)`,
           region: "wor",
           crc: "c0f481ef",
           md5: "804f49d251f911b097d6dca878cae967",
@@ -151,7 +157,7 @@ export const aerosnes_ss = {
         {
           type: "fanart",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=fanart",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=fanart`,
           crc: "baf0f3ef",
           md5: "25b34ac278e775d84105cbdd13b461f5",
           sha1: "041ca5de4afd776d2ff3f7854a2632f2826a950b",
@@ -161,7 +167,7 @@ export const aerosnes_ss = {
         {
           type: "video",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaVideoJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=video",
+          url: `https://clone.screenscraper.fr/api2/mediaVideoJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=video`,
           crc: "c196c254",
           md5: "dbde93a3d0653dc4db2cd783374d0028",
           sha1: "ae1e5e7517d38c32225705553cc1bb07654025fb",
@@ -171,7 +177,7 @@ export const aerosnes_ss = {
         {
           type: "video-normalized",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaVideoJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=video-normalized",
+          url: `https://clone.screenscraper.fr/api2/mediaVideoJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=video-normalized`,
           crc: "49b5afe0",
           md5: "9848e2460bdfefa2d3cacdb7a2642665",
           sha1: "bd0e0a84162b4cf829afcab86a429e7ffbe22e44",
@@ -181,7 +187,7 @@ export const aerosnes_ss = {
         {
           type: "themehs",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaFichierJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=themehs",
+          url: `https://clone.screenscraper.fr/api2/mediaFichierJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=themehs`,
           crc: "1ede88be",
           md5: "d2b55ecbb57155a01b1416dd6fd07241",
           sha1: "7672edc3306e8c4d2bd8374bf9cf80432c174632",
@@ -191,7 +197,7 @@ export const aerosnes_ss = {
         {
           type: "screenmarquee",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=screenmarquee(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=screenmarquee(wor)`,
           region: "wor",
           crc: "6b3c551f",
           md5: "9ed0f3386f83e24d064ef124552abede",
@@ -202,7 +208,7 @@ export const aerosnes_ss = {
         {
           type: "screenmarqueesmall",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=screenmarqueesmall(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=screenmarqueesmall(wor)`,
           region: "wor",
           crc: "3ede81c0",
           md5: "c747afeaafc076f56f8f091dc4ec62be",
@@ -213,7 +219,7 @@ export const aerosnes_ss = {
         {
           type: "manuel",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaManuelJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=manuel(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaManuelJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=manuel(us)`,
           region: "us",
           crc: "9c578299",
           md5: "0335571994acd43fe897f090ab571bb1",
@@ -224,7 +230,7 @@ export const aerosnes_ss = {
         {
           type: "manuel",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaManuelJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=manuel(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaManuelJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=manuel(us)`,
           region: "us",
           crc: "9c578299",
           md5: "0335571994acd43fe897f090ab571bb1",
@@ -235,7 +241,7 @@ export const aerosnes_ss = {
         {
           type: "steamgrid",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=steamgrid",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=steamgrid`,
           crc: "3e2c9cb3",
           md5: "d0f16820754dcabf58c440b97c9fb8db",
           sha1: "486b61b8c4a3b1c527baa9840708d0b6447d6e91",
@@ -245,7 +251,7 @@ export const aerosnes_ss = {
         {
           type: "wheel",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel(wor)`,
           region: "wor",
           crc: "2b27dc40",
           md5: "085937af1e8525014d8080fbf000eb29",
@@ -256,7 +262,7 @@ export const aerosnes_ss = {
         {
           type: "wheel",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel(wor)`,
           region: "eu",
           crc: "2b27dc40",
           md5: "085937af1e8525014d8080fbf000eb29",
@@ -267,7 +273,7 @@ export const aerosnes_ss = {
         {
           type: "wheel",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel(wor)`,
           region: "us",
           crc: "2b27dc40",
           md5: "085937af1e8525014d8080fbf000eb29",
@@ -278,7 +284,7 @@ export const aerosnes_ss = {
         {
           type: "wheel-hd",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel-hd(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel-hd(wor)`,
           region: "wor",
           crc: "fca80349",
           md5: "4ef9cb7e10fa754db6c8ed9db75122bd",
@@ -289,7 +295,7 @@ export const aerosnes_ss = {
         {
           type: "wheel-carbon",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel-carbon(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel-carbon(wor)`,
           region: "wor",
           crc: "63690922",
           md5: "9ff0a908c47949c21103793c158953a2",
@@ -300,7 +306,7 @@ export const aerosnes_ss = {
         {
           type: "wheel-steel",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel-steel(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=wheel-steel(wor)`,
           region: "wor",
           crc: "2f087f0e",
           md5: "79112a47ae6bf47e1d53d743060c7d3b",
@@ -311,7 +317,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D(eu)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D(eu)`,
           region: "eu",
           crc: "3a20b769",
           md5: "0cfb58b0eeed02a6653edce3aa15e7cd",
@@ -322,7 +328,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D(fr)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D(fr)`,
           region: "fr",
           crc: "38665649",
           md5: "f2141b7645382b7220ac3ced4f8f206b",
@@ -333,7 +339,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D(ss)`,
           region: "ss",
           crc: "1e4c87a0",
           md5: "f50457f01cc0ff91b61117efb887bd4f",
@@ -344,7 +350,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D(us)`,
           region: "us",
           crc: "f9cdeb00",
           md5: "3a21f6df8433473fe9f7226a1aa84858",
@@ -355,7 +361,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D-side",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-side(eu)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-side(eu)`,
           region: "eu",
           crc: "ad96c3f0",
           md5: "483e215754e3f780479e87e727383dcb",
@@ -366,7 +372,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D-side",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-side(fr)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-side(fr)`,
           region: "fr",
           crc: "a5d9587b",
           md5: "2a3eb1151a53fbc0da621c5f334365f3",
@@ -377,7 +383,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D-side",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-side(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-side(ss)`,
           region: "ss",
           crc: "5c92d00f",
           md5: "6ee4a6b1731788d64b7ce13176763ab0",
@@ -388,7 +394,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D-side",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-side(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-side(us)`,
           region: "us",
           crc: "b84bd308",
           md5: "8e7d468f4be6892f7c03564107b2c4df",
@@ -399,7 +405,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D-back",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-back(eu)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-back(eu)`,
           region: "eu",
           crc: "7cc11f6b",
           md5: "a487ad2992ccbb3c3c2f5c90102c7955",
@@ -410,7 +416,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D-back",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-back(fr)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-back(fr)`,
           region: "fr",
           crc: "2b1cec05",
           md5: "8604cb8c4c9c7c35f3a733b30285ed0d",
@@ -421,7 +427,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D-back",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-back(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-back(ss)`,
           region: "ss",
           crc: "36413034",
           md5: "e16fe6616055a7b71ea5c879ba68c36a",
@@ -432,7 +438,7 @@ export const aerosnes_ss = {
         {
           type: "box-2D-back",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-back(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-2D-back(us)`,
           region: "us",
           crc: "4af8fa7c",
           md5: "3b7f99e0c2efd18c6149dd96d2d358f8",
@@ -443,7 +449,7 @@ export const aerosnes_ss = {
         {
           type: "box-texture",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-texture(eu)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-texture(eu)`,
           region: "eu",
           crc: "655b4227",
           md5: "232a075deaf1b63597454338524419a6",
@@ -454,7 +460,7 @@ export const aerosnes_ss = {
         {
           type: "box-texture",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-texture(fr)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-texture(fr)`,
           region: "fr",
           crc: "c7c19dcd",
           md5: "23ec991ac70259fe3501f2797e1e56ca",
@@ -465,7 +471,7 @@ export const aerosnes_ss = {
         {
           type: "box-texture",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-texture(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-texture(ss)`,
           region: "ss",
           crc: "4de14610",
           md5: "473bb195362cca61e75b22675c354201",
@@ -476,7 +482,7 @@ export const aerosnes_ss = {
         {
           type: "box-texture",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-texture(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-texture(us)`,
           region: "us",
           crc: "cd291fef",
           md5: "1e426386ee686aae1f484600254b2d3f",
@@ -487,7 +493,7 @@ export const aerosnes_ss = {
         {
           type: "box-3D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-3D(eu)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-3D(eu)`,
           region: "eu",
           crc: "602cd086",
           md5: "0d12da3b996a87f76619b2a12c4b1433",
@@ -498,7 +504,7 @@ export const aerosnes_ss = {
         {
           type: "box-3D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-3D(fr)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-3D(fr)`,
           region: "fr",
           crc: "f9358792",
           md5: "58fe47f24a550b2e05f4c0558ff6006f",
@@ -509,7 +515,7 @@ export const aerosnes_ss = {
         {
           type: "box-3D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-3D(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-3D(ss)`,
           region: "ss",
           crc: "a1eb1a3e",
           md5: "f121af38705ec953d2795b0b9884e4d9",
@@ -520,7 +526,7 @@ export const aerosnes_ss = {
         {
           type: "box-3D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-3D(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=box-3D(us)`,
           region: "us",
           crc: "8dfb3f4b",
           md5: "05b5e00124266ae6ec4038eca9dbab54",
@@ -531,7 +537,7 @@ export const aerosnes_ss = {
         {
           type: "support-texture",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=support-texture(eu)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=support-texture(eu)`,
           region: "eu",
           crc: "3a16c3c5",
           md5: "3288fd4d63d77b2ec269954ea7bdf5e6",
@@ -542,7 +548,7 @@ export const aerosnes_ss = {
         {
           type: "support-texture",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=support-texture(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=support-texture(us)`,
           region: "us",
           crc: "8c94e321",
           md5: "0d78bbc37bed75edc1c056828b1e0392",
@@ -553,7 +559,7 @@ export const aerosnes_ss = {
         {
           type: "support-2D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=support-2D(eu)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=support-2D(eu)`,
           region: "eu",
           crc: "4fa7f446",
           md5: "fa7b0aa6035ed126d05b0329457e8504",
@@ -564,7 +570,7 @@ export const aerosnes_ss = {
         {
           type: "support-2D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=support-2D(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=support-2D(us)`,
           region: "us",
           crc: "3d6f570b",
           md5: "f212d7b6c4216d64b96b7da1f918e27e",
@@ -579,7 +585,7 @@ export const aerosnes_ss = {
           posy: "6",
           posw: "1431",
           posh: "1067",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=bezel-16-9(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=bezel-16-9(us)`,
           region: "us",
           crc: "3dc8b68b",
           md5: "bdfc3e10a17f4b2ff29f00cd145fdb69",
@@ -590,7 +596,7 @@ export const aerosnes_ss = {
         {
           type: "mixrbv1",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv1(eu)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv1(eu)`,
           region: "eu",
           crc: "7775094f",
           md5: "4039456bfca89496ef8ece1536ac27e0",
@@ -601,7 +607,7 @@ export const aerosnes_ss = {
         {
           type: "mixrbv1",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv1(fr)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv1(fr)`,
           region: "fr",
           crc: "d707ffcc",
           md5: "8626d1e3ae61bbb50c144db4b2f39609",
@@ -612,7 +618,7 @@ export const aerosnes_ss = {
         {
           type: "mixrbv1",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv1(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv1(ss)`,
           region: "ss",
           crc: "b22924c1",
           md5: "ac0240c8add0930b251ff50673627410",
@@ -623,7 +629,7 @@ export const aerosnes_ss = {
         {
           type: "mixrbv1",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv1(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv1(us)`,
           region: "us",
           crc: "a06e8584",
           md5: "4953ecc7af47304fdae092b8d1843c52",
@@ -634,7 +640,7 @@ export const aerosnes_ss = {
         {
           type: "mixrbv1",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv1(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv1(wor)`,
           region: "wor",
           crc: "a06e8584",
           md5: "4953ecc7af47304fdae092b8d1843c52",
@@ -645,7 +651,7 @@ export const aerosnes_ss = {
         {
           type: "mixrbv2",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv2(eu)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv2(eu)`,
           region: "eu",
           crc: "feb152db",
           md5: "9e99e23b121e827ca7e0e192a1a97083",
@@ -656,7 +662,7 @@ export const aerosnes_ss = {
         {
           type: "mixrbv2",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv2(fr)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv2(fr)`,
           region: "fr",
           crc: "955b60f3",
           md5: "0a883e45783d3cc18e9b3653301f3eeb",
@@ -667,7 +673,7 @@ export const aerosnes_ss = {
         {
           type: "mixrbv2",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv2(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv2(ss)`,
           region: "ss",
           crc: "135ae981",
           md5: "2e187602ba00f6e9757bf8fc6b0404e5",
@@ -678,7 +684,7 @@ export const aerosnes_ss = {
         {
           type: "mixrbv2",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv2(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv2(us)`,
           region: "us",
           crc: "2f63984f",
           md5: "5e638afd2960b0d91a90416be6046ebb",
@@ -689,7 +695,7 @@ export const aerosnes_ss = {
         {
           type: "mixrbv2",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv2(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=4&jeuid=2437&media=mixrbv2(wor)`,
           region: "wor",
           crc: "feb152db",
           md5: "9e99e23b121e827ca7e0e192a1a97083",
@@ -700,7 +706,7 @@ export const aerosnes_ss = {
         {
           type: "pictoliste",
           parent: "region",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=48&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=48&media=pictoliste`,
           crc: "da72fff7",
           md5: "37997a0c8b1bb1d05f5659e5ca6f8f5f",
           sha1: "f965ebb4edace1a6b0b63175a2697b7164438a22",
@@ -709,7 +715,7 @@ export const aerosnes_ss = {
         {
           type: "pictomonochrome",
           parent: "editeur",
-          url: "https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=37&media=logo-monochrome",
+          url: `https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=37&media=logo-monochrome`,
           crc: "c8118ad6",
           md5: "9940e08cdc0751ed406302dcb5411f28",
           sha1: "e6674ae301c7a7c6034b81e7d00ee3300b35f047",
@@ -719,7 +725,7 @@ export const aerosnes_ss = {
         {
           type: "pictocouleur",
           parent: "editeur",
-          url: "https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=37&media=wheel",
+          url: `https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=37&media=wheel`,
           crc: "7bcc51bd",
           md5: "02f7a6a1e7425c8f0df83f16970044cd",
           sha1: "26a834243531e51888ebaf48abefadf33b92f4b7",
@@ -729,7 +735,7 @@ export const aerosnes_ss = {
         {
           type: "pictomonochrome",
           parent: "developpeur",
-          url: "https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=51&media=logo-monochrome",
+          url: `https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=51&media=logo-monochrome`,
           crc: "091b46a4",
           md5: "98a5f38db074d0e73e1babacdd94b920",
           sha1: "58786a1276c411f0e95dc8230cfce70b42031959",
@@ -739,7 +745,7 @@ export const aerosnes_ss = {
         {
           type: "pictocouleur",
           parent: "developpeur",
-          url: "https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=51&media=wheel",
+          url: `https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=51&media=wheel`,
           crc: "7d6b1f6a",
           md5: "699ba528776c4ffb31f03360f614284e",
           sha1: "c7e0d145be76cf0a8bc607967f377624ec3bae8e",
@@ -749,7 +755,7 @@ export const aerosnes_ss = {
         {
           type: "pictoliste",
           parent: "joueurs",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3309&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3309&media=pictoliste`,
           crc: "78f736ef",
           md5: "1251549320ccb8c3e7e977b775df9eb4",
           sha1: "5a1adbf62ecb2271d239bbc8fbd17532996de31c",
@@ -759,7 +765,7 @@ export const aerosnes_ss = {
         {
           type: "pictoliste",
           parent: "note",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3555&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3555&media=pictoliste`,
           crc: "912e565f",
           md5: "e1848a91d9e085224b8ccf11b8b4bacc",
           sha1: "34379c7b3106f9076d2b9388e291a53f1e2f42c1",
@@ -769,7 +775,7 @@ export const aerosnes_ss = {
         {
           type: "pictoliste",
           parent: "classification",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3796&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3796&media=pictoliste`,
           crc: "73168804",
           md5: "5ff2f3339b04bf6e898b96d2bba23d5b",
           sha1: "524492838d519780518592560c7d26d96d2b7ceb",
@@ -779,7 +785,7 @@ export const aerosnes_ss = {
         {
           type: "pictomonochrome",
           parent: "classification",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3796&media=logo-monochrome",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3796&media=logo-monochrome`,
           crc: "c51618a3",
           md5: "476209ddc567705a022f4b5518a9895a",
           sha1: "dbb3291ef992c500a02193e7d8aa38994fe86560",
@@ -789,7 +795,7 @@ export const aerosnes_ss = {
         {
           type: "pictocouleur",
           parent: "classification",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3796&media=wheel",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3796&media=wheel`,
           crc: "d076a18b",
           md5: "c4fb570c824bca6ae83bd0e65f28e48e",
           sha1: "12e9e3296714f62091f4c7ebd09cf5d02841cd07",
@@ -800,7 +806,7 @@ export const aerosnes_ss = {
           type: "pictoliste",
           parent: "classification",
           subparent: "ESRB",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3653&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3653&media=pictoliste`,
           crc: "cafca3d7",
           md5: "51bfa81c19838bc679411a7b6f4053e2",
           sha1: "92253cf472ed8e71780c29ddeb6c6e260325ce1f",
@@ -811,7 +817,7 @@ export const aerosnes_ss = {
           type: "pictomonochrome",
           parent: "classification",
           subparent: "ESRB",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3653&media=logo-monochrome",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3653&media=logo-monochrome`,
           crc: "e4f09f59",
           md5: "031f5b008fd851f56fea852bf9f95126",
           sha1: "8160d583dde154dcbd717217182d2b310e756e92",
@@ -823,7 +829,7 @@ export const aerosnes_ss = {
           parent: "genre",
           subparent: "Action",
           type: "pictoliste",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=10&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=10&media=pictoliste`,
           crc: "0763cab7",
           md5: "620fe2a836dfa922412ff74ed37d5f57",
           sha1: "75481c2e5550a457b76f18451f0869222bbe5d67",
@@ -835,7 +841,7 @@ export const aerosnes_ss = {
           parent: "genre",
           subparent: "Action",
           type: "pictomonochrome",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=10&media=logo-monochrome",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=10&media=logo-monochrome`,
           crc: "312d2970",
           md5: "6f825613fcbc97bbf12de578a3751c44",
           sha1: "6d6cedcb355020d93e9e008c7168b8f69058e248",
@@ -847,7 +853,7 @@ export const aerosnes_ss = {
           parent: "genre",
           subparent: "Action",
           type: "pictomonochrome",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=10&media=logo-monochrome-svg",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=10&media=logo-monochrome-svg`,
           crc: "ca0ce2f6",
           md5: "21b6864790e6882c27f2840c5cb4e34b",
           sha1: "fa7a7936d4648ce3782f6f35ae02b260713b56a3",
@@ -859,7 +865,7 @@ export const aerosnes_ss = {
           parent: "genre",
           subparent: "Plateforme",
           type: "pictoliste",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=7&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=7&media=pictoliste`,
           crc: "d8329f23",
           md5: "ada4054a77e20edada97225e5c316116",
           sha1: "cfadf96438bde8ae1a8c3c52c85dd6768ba9b4c8",
@@ -871,7 +877,7 @@ export const aerosnes_ss = {
           parent: "genre",
           subparent: "Plateforme",
           type: "pictomonochrome",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=7&media=logo-monochrome",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=7&media=logo-monochrome`,
           crc: "0f88a1ba",
           md5: "e8c818f5f59d48642afea18e5c545c15",
           sha1: "ef3857055eaae13785d2cab692edf9454b544be3",
@@ -883,7 +889,7 @@ export const aerosnes_ss = {
           parent: "genre",
           subparent: "Plateforme",
           type: "pictomonochrome",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=7&media=logo-monochrome-svg",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=7&media=logo-monochrome-svg`,
           crc: "fa797dda",
           md5: "73a61640b94904834fdbfc7e043150e0",
           sha1: "3e5fe422339961df30bd70aa83e43671a1badce4",

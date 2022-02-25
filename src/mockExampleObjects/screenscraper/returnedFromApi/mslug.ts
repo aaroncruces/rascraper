@@ -1,3 +1,9 @@
+import {
+  devid,
+  devpassword,
+  softname,
+} from "../../../../configs/secret/screenscraper_dev_credentials";
+
 export const mslug_ss = {
   header: {
     APIversion: "2.0",
@@ -175,7 +181,7 @@ export const mslug_ss = {
         {
           type: "sstitle",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=sstitle(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=sstitle(wor)`,
           region: "wor",
           crc: "79d19638",
           md5: "83c1a989b6333920ec74bd8274ea03ea",
@@ -186,7 +192,7 @@ export const mslug_ss = {
         {
           type: "ss",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=ss(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=ss(wor)`,
           region: "wor",
           crc: "4075a594",
           md5: "51eec110f82ef232bddb6f916389f823",
@@ -197,7 +203,7 @@ export const mslug_ss = {
         {
           type: "fanart",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=fanart",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=fanart`,
           crc: "1cfbe1fd",
           md5: "a8c1bfb77f126b841f8f6aa4b9f1e170",
           sha1: "1263dad0ee89c3d402faa9e8c609f290be735292",
@@ -207,7 +213,7 @@ export const mslug_ss = {
         {
           type: "video",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaVideoJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=video",
+          url: `https://clone.screenscraper.fr/api2/mediaVideoJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=video`,
           crc: "b7f175a3",
           md5: "9813d2516df77072c41a105ad65ea6a3",
           sha1: "6fa74f026eecf1004fadbd29793779e88ec0488b",
@@ -217,7 +223,7 @@ export const mslug_ss = {
         {
           type: "video-normalized",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaVideoJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=video-normalized",
+          url: `https://clone.screenscraper.fr/api2/mediaVideoJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=video-normalized`,
           crc: "b629f60d",
           md5: "0d0031db7c64b80f6a50b2ccad67dc46",
           sha1: "6be5b7756cd76566454acc6d88af0a73f009fc17",
@@ -227,7 +233,7 @@ export const mslug_ss = {
         {
           type: "themehs",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaFichierJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=themehs",
+          url: `https://clone.screenscraper.fr/api2/mediaFichierJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=themehs`,
           crc: "97f4781f",
           md5: "238b6173785c480a7f998140b3104846",
           sha1: "92f1a8f480aa9d0be20cb17a50a66d5a7cbc351e",
@@ -237,7 +243,7 @@ export const mslug_ss = {
         {
           type: "marquee",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=marquee",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=marquee`,
           crc: "a23bab50",
           md5: "24827714b07ae114840b2a4e3d50c105",
           sha1: "469b89ba9cab6cbda34cbed91976a04c4764d253",
@@ -247,7 +253,7 @@ export const mslug_ss = {
         {
           type: "screenmarquee",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=screenmarquee(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=screenmarquee(wor)`,
           region: "wor",
           crc: "1f1cf893",
           md5: "77a17dbc652aadd0b1505cc3a441fd36",
@@ -258,7 +264,7 @@ export const mslug_ss = {
         {
           type: "screenmarqueesmall",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=screenmarqueesmall(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=screenmarqueesmall(wor)`,
           region: "wor",
           crc: "90e2fac2",
           md5: "ef558d7f4347df00d47ef85589983431",
@@ -269,7 +275,7 @@ export const mslug_ss = {
         {
           type: "flyer",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=flyer(jp)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=flyer(jp)`,
           region: "jp",
           crc: "1791e7f8",
           md5: "e1d6d3112e81f7d259c231caf0bf8e3b",
@@ -280,7 +286,7 @@ export const mslug_ss = {
         {
           type: "flyer",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=flyer(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=flyer(wor)`,
           region: "wor",
           crc: "ddd995bf",
           md5: "2e9f7ec36ad200da6d66169dec3c7a61",
@@ -291,7 +297,7 @@ export const mslug_ss = {
         {
           type: "flyer",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=flyer(wor)[1]",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=flyer(wor)[1]`,
           region: "wor",
           support: "1",
           crc: "36d88710",
@@ -303,7 +309,7 @@ export const mslug_ss = {
         {
           type: "flyer",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=flyer(wor)[2]",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=flyer(wor)[2]`,
           region: "wor",
           support: "2",
           crc: "d3f15309",
@@ -315,7 +321,7 @@ export const mslug_ss = {
         {
           type: "flyer",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=flyer(wor)[3]",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=flyer(wor)[3]`,
           region: "wor",
           support: "3",
           crc: "6ed71909",
@@ -327,7 +333,7 @@ export const mslug_ss = {
         {
           type: "steamgrid",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=steamgrid",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=steamgrid`,
           crc: "6ad7bbad",
           md5: "231ec1eae55508001965a89dca445ece",
           sha1: "43c101350fdc1d143b69d79e8f67fe81184cdc60",
@@ -337,7 +343,7 @@ export const mslug_ss = {
         {
           type: "wheel",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=wheel(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=wheel(wor)`,
           region: "wor",
           crc: "0b388a23",
           md5: "93b69875eb82d95275e549dc853987cd",
@@ -348,7 +354,7 @@ export const mslug_ss = {
         {
           type: "wheel-carbon",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=wheel-carbon(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=wheel-carbon(wor)`,
           region: "wor",
           crc: "b880e276",
           md5: "9350ebbebaae356943d48efad1c15078",
@@ -359,7 +365,7 @@ export const mslug_ss = {
         {
           type: "wheel-steel",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=wheel-steel(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=wheel-steel(wor)`,
           region: "wor",
           crc: "14adb582",
           md5: "7d9b034216b543fe9cfd18eef5d5912f",
@@ -370,7 +376,7 @@ export const mslug_ss = {
         {
           type: "box-2D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D(ss)`,
           region: "ss",
           crc: "3e0ce1d3",
           md5: "fcfa22c472a1e18db00525e4deb9074d",
@@ -381,7 +387,7 @@ export const mslug_ss = {
         {
           type: "box-2D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D(wor)`,
           region: "wor",
           crc: "7d0b53c1",
           md5: "774b97a36c0ba9d43e214efa342e4934",
@@ -392,7 +398,7 @@ export const mslug_ss = {
         {
           type: "box-2D-side",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D-side(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D-side(ss)`,
           region: "ss",
           crc: "3229fcd6",
           md5: "f1f2ed5c1da39ceaeccc84642bfcedde",
@@ -403,7 +409,7 @@ export const mslug_ss = {
         {
           type: "box-2D-side",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D-side(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D-side(wor)`,
           region: "wor",
           crc: "f69d6a48",
           md5: "5b28c4caae7d8b5427cdb1d421db749d",
@@ -414,7 +420,7 @@ export const mslug_ss = {
         {
           type: "box-2D-back",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D-back(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D-back(ss)`,
           region: "ss",
           crc: "8f86b12d",
           md5: "bc948c5940c2baeb7eeb41a2ebf9e74f",
@@ -425,7 +431,7 @@ export const mslug_ss = {
         {
           type: "box-2D-back",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D-back(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-2D-back(wor)`,
           region: "wor",
           crc: "e459e370",
           md5: "4a8ec64d0cd42cd96ef6cf565faa10c8",
@@ -436,7 +442,7 @@ export const mslug_ss = {
         {
           type: "box-texture",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-texture(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-texture(ss)`,
           region: "ss",
           crc: "3ea128ab",
           md5: "19f11afce025df93c71ce73dd256bf72",
@@ -447,7 +453,7 @@ export const mslug_ss = {
         {
           type: "box-texture",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-texture(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-texture(wor)`,
           region: "wor",
           crc: "3e3491ae",
           md5: "1af6c0f466460bd5c2ccfebab3dc1676",
@@ -458,7 +464,7 @@ export const mslug_ss = {
         {
           type: "box-3D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-3D(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-3D(ss)`,
           region: "ss",
           crc: "cdb63e8d",
           md5: "4de55bd4e8a3fa406f1383a3d919a505",
@@ -469,7 +475,7 @@ export const mslug_ss = {
         {
           type: "box-3D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-3D(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=box-3D(wor)`,
           region: "wor",
           crc: "5c306d41",
           md5: "3d6e156849121a2d004ced9025df8878",
@@ -480,7 +486,7 @@ export const mslug_ss = {
         {
           type: "support-texture",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-texture(jp)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-texture(jp)`,
           region: "jp",
           crc: "c89515c2",
           md5: "6b609bdafb35c3963135e23a64ec76cc",
@@ -491,7 +497,7 @@ export const mslug_ss = {
         {
           type: "support-texture",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-texture(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-texture(us)`,
           region: "us",
           crc: "318e8aeb",
           md5: "1dc8af96d24138d4338ad5a9018a698e",
@@ -502,7 +508,7 @@ export const mslug_ss = {
         {
           type: "support-texture",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-texture(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-texture(wor)`,
           region: "wor",
           crc: "22181f4a",
           md5: "a40b5e7c0faed29700aef44300227f62",
@@ -513,7 +519,7 @@ export const mslug_ss = {
         {
           type: "support-2D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-2D(jp)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-2D(jp)`,
           region: "jp",
           crc: "4c02b5d5",
           md5: "6c2003a8b0367f7fcbda38342e27dd0b",
@@ -524,7 +530,7 @@ export const mslug_ss = {
         {
           type: "support-2D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-2D(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-2D(us)`,
           region: "us",
           crc: "871c3388",
           md5: "400bc6da3a3fa03e35a7c2580eed783d",
@@ -535,7 +541,7 @@ export const mslug_ss = {
         {
           type: "support-2D",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-2D(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=support-2D(wor)`,
           region: "wor",
           crc: "3ebdb4f8",
           md5: "04d7e1db3cda07af31fdd4cff17a5b1b",
@@ -546,7 +552,7 @@ export const mslug_ss = {
         {
           type: "bezel-16-9",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=bezel-16-9(cus)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=bezel-16-9(cus)`,
           region: "cus",
           crc: "9af69775",
           md5: "fa5dbc572d727b8c08164caacdc89c48",
@@ -557,7 +563,7 @@ export const mslug_ss = {
         {
           type: "bezel-16-9",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=bezel-16-9(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=bezel-16-9(wor)`,
           region: "wor",
           crc: "47759e47",
           md5: "3b5a2a070893ccb39a1da31fb54511ab",
@@ -568,7 +574,7 @@ export const mslug_ss = {
         {
           type: "mixrbv1",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv1(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv1(ss)`,
           region: "ss",
           crc: "79e4b4ef",
           md5: "ac42cd8f273426f5ad812d696ee24bc9",
@@ -579,7 +585,7 @@ export const mslug_ss = {
         {
           type: "mixrbv1",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv1(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv1(wor)`,
           region: "wor",
           crc: "d03de0a6",
           md5: "3992704d8b4fc1acb581b67e24d76993",
@@ -590,7 +596,7 @@ export const mslug_ss = {
         {
           type: "mixrbv2",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv2(jp)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv2(jp)`,
           region: "jp",
           crc: "b3a6e9c4",
           md5: "446e80267be416d118c2438ddcea4ee3",
@@ -601,7 +607,7 @@ export const mslug_ss = {
         {
           type: "mixrbv2",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv2(ss)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv2(ss)`,
           region: "ss",
           crc: "23c3ad4e",
           md5: "2185c4afcf2a55181ae9f56671cfb636",
@@ -612,7 +618,7 @@ export const mslug_ss = {
         {
           type: "mixrbv2",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv2(us)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv2(us)`,
           region: "us",
           crc: "5e479d2a",
           md5: "9a762c3e1d8b7cc1505bd9d331f3fda1",
@@ -623,7 +629,7 @@ export const mslug_ss = {
         {
           type: "mixrbv2",
           parent: "jeu",
-          url: "https://clone.screenscraper.fr/api2/mediaJeu.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv2(wor)",
+          url: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=142&jeuid=37604&media=mixrbv2(wor)`,
           region: "wor",
           crc: "3d050a56",
           md5: "bdc141c6f6313b0b7ea4875144133cac",
@@ -634,7 +640,7 @@ export const mslug_ss = {
         {
           type: "pictoliste",
           parent: "region",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=57&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=57&media=pictoliste`,
           crc: "3e16ef2f",
           md5: "477d7229d6acc6f9fe10410d8523f91a",
           sha1: "99cb5eab43e90a3dd73b1034b140a8ead05c224f",
@@ -643,7 +649,7 @@ export const mslug_ss = {
         {
           type: "pictomonochrome",
           parent: "editeur",
-          url: "https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=80&media=logo-monochrome",
+          url: `https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=80&media=logo-monochrome`,
           crc: "91b888d9",
           md5: "c65eb030ca79e045d68a756bbbd6fede",
           sha1: "e4a6cf98c5e36deac23edb73a6c2a69684581583",
@@ -653,7 +659,7 @@ export const mslug_ss = {
         {
           type: "pictocouleur",
           parent: "editeur",
-          url: "https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=80&media=wheel",
+          url: `https://clone.screenscraper.fr/api2/mediaCompagnie.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=80&media=wheel`,
           crc: "79d146f7",
           md5: "77dd1be833a0e58071b7c6e82750eafb",
           sha1: "378a20a6eafa3b6bb2b35a456e357008b16df5c4",
@@ -663,7 +669,7 @@ export const mslug_ss = {
         {
           type: "pictoliste",
           parent: "joueurs",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3304&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3304&media=pictoliste`,
           crc: "0abdc9bf",
           md5: "05057bd8fcfe368b23628ba314e94df0",
           sha1: "6d9b48053c720498ece35d0029621b7d25010d3b",
@@ -673,7 +679,7 @@ export const mslug_ss = {
         {
           type: "pictoliste",
           parent: "note",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3557&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3557&media=pictoliste`,
           crc: "206732a0",
           md5: "ca952b9f9d623c920455eaa80c5c115b",
           sha1: "b0a49aae7e51432fcae126eb1e9b688bd966c448",
@@ -683,7 +689,7 @@ export const mslug_ss = {
         {
           type: "pictoliste",
           parent: "classification",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3802&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3802&media=pictoliste`,
           crc: "385392aa",
           md5: "1e710f17d358997f0bef97ead5e9b8ed",
           sha1: "343afca9a823108a1095150fbfb6692f14679124",
@@ -693,7 +699,7 @@ export const mslug_ss = {
         {
           type: "pictomonochrome",
           parent: "classification",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3802&media=logo-monochrome",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3802&media=logo-monochrome`,
           crc: "03c1dae1",
           md5: "6cbbbddd1fa8454260174f410e0e49c7",
           sha1: "2969b7ed6a7723a654981ba55992f2f11d72058f",
@@ -703,7 +709,7 @@ export const mslug_ss = {
         {
           type: "pictocouleur",
           parent: "classification",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3802&media=wheel",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3802&media=wheel`,
           crc: "5c958002",
           md5: "1da5454534619e3e1391975d01f663e8",
           sha1: "861e0ed652fc589097566ff6ce40c6cc8c06150a",
@@ -714,7 +720,7 @@ export const mslug_ss = {
           type: "pictoliste",
           parent: "classification",
           subparent: "PEGI",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=3712&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=3712&media=pictoliste`,
           crc: "1e530b32",
           md5: "4bfb10affd6a17af9f633eaf20d10978",
           sha1: "651bcfd7f5e9a805bb10410233ccf08076bf1e4e",
@@ -726,7 +732,7 @@ export const mslug_ss = {
           parent: "genre",
           subparent: "Tir",
           type: "pictoliste",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=2646&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=2646&media=pictoliste`,
           crc: "d0b14f40",
           md5: "155763c889de6d44fd58cd36bdfce80b",
           sha1: "840cb4d69672c4b48a9b9f418272010fb2b4557c",
@@ -738,7 +744,7 @@ export const mslug_ss = {
           parent: "genre",
           subparent: "Tir",
           type: "pictomonochrome",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=2646&media=logo-monochrome",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=2646&media=logo-monochrome`,
           crc: "c0ab2a94",
           md5: "3eace7ca43a0827467c8a3d6b0ddf0c1",
           sha1: "5f305f34bfb22c84a8de9c35cfe3d05d1384e54b",
@@ -750,7 +756,7 @@ export const mslug_ss = {
           parent: "genre",
           subparent: "Tir",
           type: "pictomonochrome",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=2646&media=logo-monochrome-svg",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=2646&media=logo-monochrome-svg`,
           crc: "cef80344",
           md5: "606c10f20d34b3433e0dd13d6d77cfd1",
           sha1: "99456edd47eec57be1e185340d2a1e19d193441e",
@@ -762,7 +768,7 @@ export const mslug_ss = {
           parent: "genre",
           subparent: "Tir / Run and Gun",
           type: "pictoliste",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=2903&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=2903&media=pictoliste`,
           crc: "a4fb9221",
           md5: "86def202dcd39d55fd8b762030bb16da",
           sha1: "2f70185293004ec14c7ff16bfa3deb85763c660e",
@@ -774,7 +780,7 @@ export const mslug_ss = {
           parent: "genre",
           subparent: "Tir / Run and Gun",
           type: "pictomonochrome",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=2903&media=logo-monochrome",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=2903&media=logo-monochrome`,
           crc: "9f52a562",
           md5: "7215724e874468f3673b0ee42fc83a3a",
           sha1: "372a1fcd0e433bc7e25873aef7ff6a75bbd07045",
@@ -786,7 +792,7 @@ export const mslug_ss = {
           parent: "genre",
           subparent: "Tir / Run and Gun",
           type: "pictomonochrome",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=2903&media=logo-monochrome-svg",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=2903&media=logo-monochrome-svg`,
           crc: "4d071ed3",
           md5: "7924c228e84a4b7d20566b33dfb94e40",
           sha1: "3477ef67cc9c98daf70306b10bf287a1fabdeb16",
@@ -798,7 +804,7 @@ export const mslug_ss = {
           parent: "genre",
           subparent: "Plateforme",
           type: "pictoliste",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=7&media=pictoliste",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=7&media=pictoliste`,
           crc: "d8329f23",
           md5: "ada4054a77e20edada97225e5c316116",
           sha1: "cfadf96438bde8ae1a8c3c52c85dd6768ba9b4c8",
@@ -810,7 +816,7 @@ export const mslug_ss = {
           parent: "genre",
           subparent: "Plateforme",
           type: "pictomonochrome",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=7&media=logo-monochrome",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=7&media=logo-monochrome`,
           crc: "0f88a1ba",
           md5: "e8c818f5f59d48642afea18e5c545c15",
           sha1: "ef3857055eaae13785d2cab692edf9454b544be3",
@@ -822,7 +828,7 @@ export const mslug_ss = {
           parent: "genre",
           subparent: "Plateforme",
           type: "pictomonochrome",
-          url: "https://clone.screenscraper.fr/api2/mediaGroup.php?devid=aaroncio&devpassword=j5OdeaTg5JF&softname=rascraper&ssid=&sspassword=&groupid=7&media=logo-monochrome-svg",
+          url: `https://clone.screenscraper.fr/api2/mediaGroup.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&groupid=7&media=logo-monochrome-svg`,
           crc: "fa797dda",
           md5: "73a61640b94904834fdbfc7e043150e0",
           sha1: "3e5fe422339961df30bd70aa83e43671a1badce4",
