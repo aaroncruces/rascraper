@@ -3,14 +3,14 @@ import {
   ScreenScraperLanguages,
   ScreenScraperRegions,
 } from "../../../interfacesAndStructures/localesAndRegions";
-import { aeromegaExpectedAssets } from "../../../mockExampleObjects/screenscraper/assets/aeromega_asset";
-import { aerosnesExpectedAssets } from "../../../mockExampleObjects/screenscraper/assets/aerosnes_asset";
-import { mslugExpectedAssets } from "../../../mockExampleObjects/screenscraper/assets/mslug_asset";
+import { aeromega_SS_ExpectedAssets } from "../../../mockExampleObjects/screenscraper/assets/aeromega_asset";
+import { aerosnes_SS_ExpectedAssets } from "../../../mockExampleObjects/screenscraper/assets/aerosnes_asset";
+import { mslug_SS_ExpectedAssets } from "../../../mockExampleObjects/screenscraper/assets/mslug_asset";
 import {
-  smb2ExpectedAssets,
-  smb2_default_jp_ExpectedAssets,
-  smb2_fr_default_ExpectedAssets,
-  smb2_fr_jp_ExpectedAssets,
+  smb2_SS_ExpectedAssets,
+  smb2_default_jp_SS_ExpectedAssets,
+  smb2_fr_default_SS_ExpectedAssets,
+  smb2_fr_jp_SS_ExpectedAssets,
 } from "../../../mockExampleObjects/screenscraper/assets/smb2_asset";
 import scrape from "../screenscraper";
 
@@ -19,23 +19,23 @@ jest.mock("../../../io/apiRequest");
 
 describe("--> Screenscraper engine", () => {
   it("Obtains the assets of the game metal slug", async () => {
-    await expect(scrape("mslug.zip")).resolves.toEqual(mslugExpectedAssets);
+    await expect(scrape("mslug.zip")).resolves.toEqual(mslug_SS_ExpectedAssets);
   });
 
   it("Obtains the assets of the game Aero the Acro-Bat on Super Nintendo", async () => {
     await expect(
       scrape("Aero the Acro-Bat (USA).sfc", undefined, GameSystems.SNES)
-    ).resolves.toEqual(aerosnesExpectedAssets);
+    ).resolves.toEqual(aerosnes_SS_ExpectedAssets);
   });
 
   it("Obtains the assets of the game Aero the Acro-Bat on MegaDrive", async () => {
     await expect(
       scrape("Aero the Acro-Bat (USA).sfc", undefined, GameSystems.MEGADRIVE)
-    ).resolves.toEqual(aeromegaExpectedAssets);
+    ).resolves.toEqual(aeromega_SS_ExpectedAssets);
   });
   it("Obtains the assets of super mario bros 2 (NES) with default parameters", async () => {
     await expect(scrape("Super Mario Bros. 2 (USA).zip")).resolves.toEqual(
-      smb2ExpectedAssets
+      smb2_SS_ExpectedAssets
     );
   });
   it("Obtains the assets of super mario bros 2 (NES) with custom region and custom language", async () => {
@@ -47,7 +47,7 @@ describe("--> Screenscraper engine", () => {
         ScreenScraperLanguages.FR,
         ScreenScraperRegions.JP
       )
-    ).resolves.toEqual(smb2_fr_jp_ExpectedAssets);
+    ).resolves.toEqual(smb2_fr_jp_SS_ExpectedAssets);
   });
   it("Obtains the assets of super mario bros 2 (NES) with custom language and wrong region", async () => {
     await expect(
@@ -58,7 +58,7 @@ describe("--> Screenscraper engine", () => {
         ScreenScraperLanguages.FR,
         "wrong"
       )
-    ).resolves.toEqual(smb2_fr_default_ExpectedAssets);
+    ).resolves.toEqual(smb2_fr_default_SS_ExpectedAssets);
   });
   it("Obtains the assets of super mario bros 2 (NES) with custom region and wrong language", async () => {
     await expect(
@@ -69,7 +69,7 @@ describe("--> Screenscraper engine", () => {
         "wrong",
         ScreenScraperRegions.JP
       )
-    ).resolves.toEqual(smb2_default_jp_ExpectedAssets);
+    ).resolves.toEqual(smb2_default_jp_SS_ExpectedAssets);
   });
   it("Obtains the assets of super mario bros 2 (NES) with wrong both language and region", async () => {
     await expect(
@@ -80,7 +80,7 @@ describe("--> Screenscraper engine", () => {
         "wrong",
         "wrong"
       )
-    ).resolves.toEqual(smb2ExpectedAssets);
+    ).resolves.toEqual(smb2_SS_ExpectedAssets);
   });
 
   //takes too long if testing it against the real web api . TODO: see why

@@ -4,29 +4,20 @@ import { GameCompleteInformation } from "../interfacesAndStructures/GameComplete
 import { GameSystem } from "../interfacesAndStructures/GameSystems";
 import { Assets } from "../interfacesAndStructures/Assets";
 const path = require("path");
-//TODO: unzip, unrar, etc. autosort roms
-//todo: custom systems to define
 
-const scrapeFolder = async (
-  folderPath: string,
-  scrapingEngine: string = ScrapingEngine.screenscraper
-): Promise<Array<GameCompleteInformation>> => {
-  return [];
-};
-
-export const scrapeSingleGame = async (
+export const scrapeGame = async (
   romName: string,
   romCRC?: string | undefined,
-  gamesystem: GameSystem | undefined = undefined,
+  gameSystem: GameSystem | undefined = undefined,
   language: string = "en",
   customRegion: string | undefined = undefined,
-  engine: string = ScrapingEngine.screenscraper
+  scrapingEngine: string = ScrapingEngine.screenscraper
 ): Promise<Assets> => {
-  if (engine == ScrapingEngine.screenscraper) {
+  if (scrapingEngine == ScrapingEngine.screenscraper) {
     const result = await screenscraper(
       romName,
       romCRC,
-      gamesystem,
+      gameSystem,
       language,
       customRegion
     );

@@ -1,8 +1,8 @@
-interface FileCRCExample {
+export interface FileCRCPair {
   filename: string;
   crc: string;
 }
-export const knowcrc: Array<FileCRCExample> = [
+export const knowcrc: Array<FileCRCPair> = [
   {
     filename: "mslug.zip",
     crc: "somecrc",

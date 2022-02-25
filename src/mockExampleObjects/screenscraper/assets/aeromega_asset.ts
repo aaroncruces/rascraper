@@ -1,7 +1,7 @@
 import { Assets } from "../../../interfacesAndStructures/Assets";
 import { GameSystems } from "../../../interfacesAndStructures/GameSystems";
 
-export const aeromegaExpectedAssets: Assets = {
+export const aeromega_SS_ExpectedAssets: Assets = {
   gameName: "Aero the Acro-Bat",
   gameDescription:
     "You play as bat Aero, who have to stop the mad scientist Edgar Ektor, who is trying to rid the world of amusement and fun. So you jump through the circus-style levels, using different kinds of machines such as catapults, cannons, bubble machines, platforms, etc., collecting various power-ups such as cheese, soda, keys, clocks, etc. and avoiding lethal obstacles.",

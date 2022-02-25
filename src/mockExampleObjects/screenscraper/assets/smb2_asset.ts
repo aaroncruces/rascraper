@@ -1,7 +1,7 @@
 import { Assets } from "../../../interfacesAndStructures/Assets";
 import { GameSystems } from "../../../interfacesAndStructures/GameSystems";
 
-export const smb2ExpectedAssets: Assets = {
+export const smb2_SS_ExpectedAssets: Assets = {
   gameName: "Super Mario Bros. 2",
   gameDescription:
     "One night Mario has a strange dream, where he opens a door to another world filled with even stranger creatures and lands then those in his last adventure against Bowser. Amazingly, the next day, Mario, Luigi, Toad, and the Princess stumble upon a cave, which leads to the world that was in Mario's dream.\n" +
@@ -32,7 +32,7 @@ export const smb2ExpectedAssets: Assets = {
 };
 
 //GameSystems.NES
-export const smb2_fr_default_ExpectedAssets: Assets = {
+export const smb2_fr_default_SS_ExpectedAssets: Assets = {
   gameName: "Super Mario Bros. 2",
   gameDescription:
     "Mario est de retour! Plus grand et plus fort que jamais!\r\n" +
@@ -52,7 +52,7 @@ export const smb2_fr_default_ExpectedAssets: Assets = {
   deducedGameSystem: GameSystems.NES,
 };
 
-export const smb2_default_jp_ExpectedAssets: Assets = {
+export const smb2_default_jp_SS_ExpectedAssets: Assets = {
   gameName: "Super Mario USA",
   gameDescription:
     "One night Mario has a strange dream, where he opens a door to another world filled with even stranger creatures and lands then those in his last adventure against Bowser. Amazingly, the next day, Mario, Luigi, Toad, and the Princess stumble upon a cave, which leads to the world that was in Mario's dream.\n" +
@@ -81,7 +81,7 @@ export const smb2_default_jp_ExpectedAssets: Assets = {
     extensions: ["nes"],
   },
 };
-export const smb2_fr_jp_ExpectedAssets: Assets = {
+export const smb2_fr_jp_SS_ExpectedAssets: Assets = {
   gameName: "Super Mario USA",
   gameDescription:
     "Mario est de retour! Plus grand et plus fort que jamais!\r\n" +

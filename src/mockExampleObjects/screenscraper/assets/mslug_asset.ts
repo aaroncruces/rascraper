@@ -1,7 +1,7 @@
 import { Assets } from "../../../interfacesAndStructures/Assets";
 import { GameSystems } from "../../../interfacesAndStructures/GameSystems";
 
-export const mslugExpectedAssets: Assets = {
+export const mslug_SS_ExpectedAssets: Assets = {
   gameName: "Metal Slug - Super Vehicle-001",
   gameDescription:
     "Metal Slug, originally released on the Neo Geo, is a side-scrolling shoot'em'up.\n" +
