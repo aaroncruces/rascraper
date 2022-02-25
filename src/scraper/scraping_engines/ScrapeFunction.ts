@@ -1,5 +1,5 @@
-import { Assets } from "../structures/Assets";
-import { GameSystem } from "../structures/GameSystems";
+import { Assets } from "../../interfacesAndStructures/Assets";
+import { GameSystem } from "../../interfacesAndStructures/GameSystems";
 
 /**
  * interface on wich all scraping engines have to comply

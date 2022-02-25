@@ -4,9 +4,9 @@
 import {
   gameSystemFromRomExtension,
   gameSystemFromRomFolderRoute,
-} from "../gameFileSystemAndRoutes";
-import { GameCompleteInformation } from "../structures/GameCompleteInformation";
-import { GameSystem } from "../structures/GameSystems";
+} from "../io/gameFileSystemAndRoutes";
+import { GameCompleteInformation } from "../interfacesAndStructures/GameCompleteInformation";
+import { GameSystem } from "../interfacesAndStructures/GameSystems";
 
 const path = require("path");
 

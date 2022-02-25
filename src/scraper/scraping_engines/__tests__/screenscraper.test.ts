@@ -1,9 +1,9 @@
-import { GameSystems } from "../../structures/GameSystems";
+import { GameSystems } from "../../../interfacesAndStructures/GameSystems";
 import scrape from "../screenscraper";
 import { aeromegaExpectedAssets } from "./screenscraperHelpers/aeromega_asset";
 import { aerosnesExpectedAssets } from "./screenscraperHelpers/aerosnes_asset";
 import { mslugExpectedAssets } from "./screenscraperHelpers/mslug_asset";
-jest.mock("../../apiRequest");
+jest.mock("../../../io/apiRequest");
 //jest.setTimeout(500000); //if testing screenscraper online (goes really slow sometimes)
 
 describe("--> Screenscraper engine", () => {

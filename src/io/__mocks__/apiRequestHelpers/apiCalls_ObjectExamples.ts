@@ -2,7 +2,7 @@ import {
   devid,
   devpassword,
   softname,
-} from "../../../configs/secret/screenscraper_dev_credentials";
+} from "../../../../configs/secret/screenscraper_dev_credentials";
 import { aeromega_ss } from "./screenscraperObjectsReturned/aeromega";
 import { aerosnes_ss } from "./screenscraperObjectsReturned/aerosnes";
 import { mslug_ss } from "./screenscraperObjectsReturned/mslug";

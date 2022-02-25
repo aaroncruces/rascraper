@@ -1,5 +1,5 @@
-import { Assets } from "../../../structures/Assets";
-import { GameSystems } from "../../../structures/GameSystems";
+import { Assets } from "../../../../interfacesAndStructures/Assets";
+import { GameSystems } from "../../../../interfacesAndStructures/GameSystems";
 
 export const mslugExpectedAssets: Assets = {
   gameName: "Metal Slug - Super Vehicle-001",

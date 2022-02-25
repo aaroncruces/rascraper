@@ -1,7 +1,5 @@
-import { getObjectFromApi } from "../apiRequest";
-import { scrapeSingleGame } from "../scraper";
-import { mslugExpectedAssets } from "../scraping_engines/__tests__/screenscraperHelpers/mslug_asset";
-import { GameSystems } from "../structures/GameSystems";
+import { scrapeSingleGame } from "../../scraper/scraper";
+import { mslugExpectedAssets } from "../../scraper/scraping_engines/__tests__/screenscraperHelpers/mslug_asset";
 
 jest.mock("../apiRequest");
 

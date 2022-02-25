@@ -1,4 +1,8 @@
-import { GameSystem, GameSystems } from "./structures/GameSystems";
+import {
+  GameSystem,
+  GameSystems,
+} from "../interfacesAndStructures/GameSystems";
+
 const fs = require("fs").promises;
 const path = require("path");
 

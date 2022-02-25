@@ -8,9 +8,8 @@ import {
   gameSystemFromRomFolderRoute,
   getGamesRouteList,
 } from "../gameFileSystemAndRoutes";
-import { GameSystems } from "../structures/GameSystems";
+import { GameSystems } from "../../interfacesAndStructures/GameSystems";
 import { resetGlobalFSMock } from "../__mocks__/fileSystem";
-
 jest.mock("../fileSystem");
 jest.mock("../gameFileSystemAndRoutes");
 

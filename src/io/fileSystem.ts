@@ -1,4 +1,3 @@
-import { GameSystem, GameSystems } from "./structures/GameSystems";
 const fs = require("fs").promises;
 const path = require("path");
 
