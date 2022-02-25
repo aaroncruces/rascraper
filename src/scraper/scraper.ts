@@ -8,9 +8,9 @@ const path = require("path");
 export const scrapeGame = async (
   romName: string,
   romCRC?: string | undefined,
-  gameSystem: GameSystem | undefined = undefined,
-  language: string = "en",
-  customRegion: string | undefined = undefined,
+  gameSystem?: GameSystem,
+  language?: string,
+  customRegion?: string,
   scrapingEngine: string = ScrapingEngine.screenscraper
 ): Promise<Assets> => {
   if (scrapingEngine == ScrapingEngine.screenscraper) {
