@@ -25,7 +25,7 @@ export const apiCallsExamples: Array<objectExample> = [
     url: `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&output=json&romtype=rom&systemeid=1&romnom=Aero%20the%20Acro-Bat%20(USA).sfc`,
     objectReturned: aeromega_ss,
   },
-  //Super Mario Bros. 2 (USA).zip
+
   {
     url: `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&output=json&romtype=rom&romnom=Super%20Mario%20Bros.%202%20(USA).zip`,
     objectReturned: smb2_ss,

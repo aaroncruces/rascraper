@@ -8,8 +8,15 @@ import {
   GameSystem,
   GameSystems,
 } from "../../interfacesAndStructures/GameSystems";
+import {
+  ScreenScraperLanguages,
+  ScreenScraperRegions,
+} from "../../interfacesAndStructures/localesAndRegions";
 import { getObjectFromApi } from "../../io/apiRequest";
 import { ScrapeFunction } from "./ScrapeFunction";
+
+const FALLBACKLANGUAGE: string = ScreenScraperLanguages.EN;
+const FALLBACKREGION: string = ScreenScraperRegions.US;
 
 /**
  * scrapes a single rom from screenscraper.fr
@@ -24,7 +31,7 @@ const scrape: ScrapeFunction = async (
   romName: string,
   romCRC?: string | undefined,
   gamesystem?: GameSystem | undefined,
-  language: string = "en",
+  language?: string | undefined,
   customRegion?: string | undefined
 ) => {
   let gameSystemIDParam = "";
@@ -39,7 +46,7 @@ const scrape: ScrapeFunction = async (
 
   let gameAssets: Assets = {};
 
-  gameAssets.gameName = getNameFromResponse(responseObject);
+  gameAssets.gameName = getNameFromResponse(responseObject, customRegion);
 
   gameAssets.gameDescription = getDescriptionFromResponse(
     responseObject,
@@ -83,23 +90,39 @@ const scrape: ScrapeFunction = async (
   return gameAssets;
 };
 
-const getNameFromResponse = (responseObject: any): string => {
-  const romRegion: string = getRegionFromResponse(responseObject) || "ss";
+const getNameFromResponse = (
+  responseObject: any,
+  customRegion?: string | undefined
+): string => {
   const romNameArray: Array<{ region: string; text: string }> =
     responseObject.response.jeu.noms;
+
   const romname =
-    romNameArray?.find((romName) => romName.region == romRegion)?.text ||
+    romNameArray?.find((romName) => romName.region == customRegion)?.text ||
+    romNameArray?.find(
+      (romName) => romName.region == getRegionFromResponse(responseObject)
+    )?.text ||
+    romNameArray?.find((romName) => romName.region == FALLBACKREGION)?.text ||
+    romNameArray?.find(
+      (romName) => romName.region == ScreenScraperRegions.DEFAULT1
+    )?.text ||
+    romNameArray?.find(
+      (romName) => romName.region == ScreenScraperRegions.DEFAULT2
+    )?.text ||
     "no name found";
   return romname;
 };
+
 const getDescriptionFromResponse = (
   responseObject: any,
-  locale: string = "en"
+  language?: string | undefined
 ): string => {
   const romDescriptionArray: Array<{ langue: string; text: string }> =
     responseObject.response.jeu.synopsis;
   const romDescription =
-    romDescriptionArray?.find((romName) => romName.langue == locale)?.text ||
+    romDescriptionArray?.find((romName) => romName.langue == language)?.text ||
+    romDescriptionArray?.find((romName) => romName.langue == FALLBACKLANGUAGE)
+      ?.text ||
     "no description";
   return romDescription;
 };
@@ -121,17 +144,27 @@ const getMediaObjectFromResponse = (
 
   const romMediaArray: Array<mediaObject> = responseObject.response.jeu.medias;
 
-  let romMedia = romMediaArray.find(
-    (romMediaItem) =>
-      romMediaItem.region == romRegion && romMediaItem.type == mediaType
+  return (
+    romMediaArray.find(
+      (romMediaItem) =>
+        romMediaItem.region == romRegion && romMediaItem.type == mediaType
+    ) ||
+    romMediaArray.find(
+      (romMediaItem) =>
+        romMediaItem.region == FALLBACKREGION && romMediaItem.type == mediaType
+    ) ||
+    romMediaArray.find(
+      (romMediaItem) =>
+        romMediaItem.region == ScreenScraperRegions.DEFAULT1 &&
+        romMediaItem.type == mediaType
+    ) ||
+    romMediaArray.find(
+      (romMediaItem) =>
+        romMediaItem.region == ScreenScraperRegions.DEFAULT2 &&
+        romMediaItem.type == mediaType
+    ) ||
+    romMediaArray.find((romMediaItem) => romMediaItem.type == mediaType)
   );
-  //if the region is non existant or not found, get the first one in the list
-  if (!romMedia)
-    romMedia = romMediaArray.find(
-      (romMediaItem) => romMediaItem.type == mediaType
-    );
-
-  return romMedia;
 };
 
 const getRegionFromResponse = (responseObject: any) =>
@@ -143,7 +176,7 @@ const getIDFromResponse = (responseObject: any): number =>
 const gameSystemFromScreenScraperID = (id: number): GameSystem | undefined => {
   for (let gameSystemSelector in GameSystems) {
     const gameSystemIterated: GameSystem =
-      //@ts-ignore because I don't know how to iterate "properly" the static members of a class
+      //@ts-ignore because I don't know how to iterate "properly" the static members of a class. I cannot make a enum with objects
       GameSystems[gameSystemSelector] as GameSystem;
     if (gameSystemIterated.screenscraperID == id) return gameSystemIterated;
   }
