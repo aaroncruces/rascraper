@@ -1,9 +1,7 @@
 import screenscraper from "./scraping_engines/screenscraper";
 import { ScrapingEngine } from "./scraping_engines/ScrapingEngines";
-import { GameCompleteInformation } from "../interfacesAndStructures/GameCompleteInformation";
 import { GameSystem } from "../interfacesAndStructures/GameSystems";
 import { Assets } from "../interfacesAndStructures/Assets";
-const path = require("path");
 
 export const scrapeGame = async (
   romName: string,
