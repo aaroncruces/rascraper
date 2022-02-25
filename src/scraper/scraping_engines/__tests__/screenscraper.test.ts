@@ -1,8 +1,8 @@
 import { GameSystems } from "../../../interfacesAndStructures/GameSystems";
+import { aeromegaExpectedAssets } from "../../../mockExampleObjects/screenscraper/assets/aeromega_asset";
+import { aerosnesExpectedAssets } from "../../../mockExampleObjects/screenscraper/assets/aerosnes_asset";
+import { mslugExpectedAssets } from "../../../mockExampleObjects/screenscraper/assets/mslug_asset";
 import scrape from "../screenscraper";
-import { aeromegaExpectedAssets } from "../__tests_helpers__/screenscraper/aeromega_asset";
-import { aerosnesExpectedAssets } from "../__tests_helpers__/screenscraper/aerosnes_asset";
-import { mslugExpectedAssets } from "../__tests_helpers__/screenscraper/mslug_asset";
 
 jest.mock("../../../io/apiRequest");
 //jest.setTimeout(500000); //if testing screenscraper online (goes really slow sometimes)

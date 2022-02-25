@@ -1,8 +1,8 @@
-import { Assets } from "./structures/Assets";
 import screenscraper from "./scraping_engines/screenscraper";
-import { GameSystem } from "./structures/GameSystems";
 import { ScrapingEngine } from "./scraping_engines/ScrapingEngines";
-import { GameCompleteInformation } from "./structures/GameCompleteInformation";
+import { GameCompleteInformation } from "../interfacesAndStructures/GameCompleteInformation";
+import { GameSystem } from "../interfacesAndStructures/GameSystems";
+import { Assets } from "../interfacesAndStructures/Assets";
 const path = require("path");
 //TODO: unzip, unrar, etc. autosort roms
 //todo: custom systems to define

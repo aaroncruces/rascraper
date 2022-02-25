@@ -1,3 +1,5 @@
+import { mslugExpectedAssets } from "../../mockExampleObjects/screenscraper/assets/mslug_asset";
+import { smb2ExpectedAssets } from "../../mockExampleObjects/screenscraper/assets/smb2_asset";
 import { scrapeSingleGame } from "../../scraper/scraper";
 
 jest.mock("../../io/apiRequest");
