@@ -1,13 +1,15 @@
-import { Assets } from "../structures/Assets";
-import { GameSystem, GameSystems } from "../structures/GameSystems";
-import { ScrapeFunction } from "./ScrapeFunction";
-import axios from "axios";
 import {
   devid,
   devpassword,
   softname,
-} from "../../configs/secret/screenscraper_dev_credentials";
-import { getObjectFromApi } from "../apiRequest";
+} from "../../../configs/secret/screenscraper_dev_credentials";
+import { Assets } from "../../interfacesAndStructures/Assets";
+import {
+  GameSystem,
+  GameSystems,
+} from "../../interfacesAndStructures/GameSystems";
+import { getObjectFromApi } from "../../io/apiRequest";
+import { ScrapeFunction } from "./ScrapeFunction";
 
 /**
  * scrapes a single rom from screenscraper.fr

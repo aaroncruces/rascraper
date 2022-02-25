@@ -1,7 +1,6 @@
 import { scrapeSingleGame } from "../../scraper/scraper";
-import { mslugExpectedAssets } from "../../scraper/scraping_engines/__tests__/screenscraperHelpers/mslug_asset";
-
-jest.mock("../apiRequest");
+import { mslugExpectedAssets } from "../scraping_engines/__tests_helpers__/screenscraper/mslug_asset";
+jest.mock("../../io/apiRequest");
 
 describe("scraping a single rom", () => {
   it("scrapes the assets from metal slug with the default parameters", async () => {
