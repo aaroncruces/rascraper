@@ -2,7 +2,7 @@ interface FileCRCExample {
   filename: string;
   crc: string;
 }
-export const apiCallsExamples: Array<FileCRCExample> = [
+export const knowcrc: Array<FileCRCExample> = [
   {
     filename: "mslug.zip",
     crc: "somecrc",

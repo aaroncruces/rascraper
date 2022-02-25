@@ -143,9 +143,7 @@ describe("create and delete folders and text files", () => {
   beforeAll(() => {
     resetGlobalFSMock();
   });
-  afterAll(() => {
-    console.log(getGlobalFSMock());
-  });
+  afterAll(() => {});
   it("creates a folder  called jestfoldertest in ./testsandbox", async () => {
     await expect(
       createFolder("./testsandbox/jestfoldertest")

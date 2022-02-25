@@ -40,7 +40,6 @@ export const createPlaylistFilesAndDownloadAssets = async (
       playlistList[playlistName] = [playlist];
     }
   }
-  //console.log(playlistList);
 };
 
 const generateRetroArchPlaylistItem = (

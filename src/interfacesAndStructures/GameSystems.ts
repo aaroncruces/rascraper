@@ -31,9 +31,17 @@ export class GameSystems {
 
   static NEOGEO: GameSystem = {
     systemFullName: "Neo Geo",
-    systemShortName: "Neo-Geo",
+    systemShortName: "Neogeo",
     defaultFolder: "neogeo",
     screenscraperID: 142,
     extensions: ["zip"],
+  };
+
+  static NES: GameSystem = {
+    systemFullName: "Nintendo Entertainment System",
+    systemShortName: "Nes",
+    defaultFolder: "nes",
+    screenscraperID: 3,
+    extensions: ["nes"],
   };
 }

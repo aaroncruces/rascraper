@@ -6,6 +6,7 @@ import {
 import { aeromega_ss } from "./screenscraperObjectsReturned/aeromega";
 import { aerosnes_ss } from "./screenscraperObjectsReturned/aerosnes";
 import { mslug_ss } from "./screenscraperObjectsReturned/mslug";
+import { smb2_ss } from "./screenscraperObjectsReturned/smb2";
 
 interface objectExample {
   url: string;
@@ -23,5 +24,10 @@ export const apiCallsExamples: Array<objectExample> = [
   {
     url: `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&output=json&romtype=rom&systemeid=1&romnom=Aero%20the%20Acro-Bat%20(USA).sfc`,
     objectReturned: aeromega_ss,
+  },
+  //Super Mario Bros. 2 (USA).zip
+  {
+    url: `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&output=json&romtype=rom&romnom=Super%20Mario%20Bros.%202%20(USA).zip`,
+    objectReturned: smb2_ss,
   },
 ];
