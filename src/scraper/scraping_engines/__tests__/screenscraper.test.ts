@@ -12,35 +12,45 @@ import {
   smb2_fr_default_SS_ExpectedAssets,
   smb2_fr_jp_SS_ExpectedAssets,
 } from "../../../mockExampleObjects/screenscraper/assets/smb2_asset";
-import scrape from "../screenscraper";
+import scrape_screenscraper from "../screenscraper";
 
 jest.mock("../../../io/apiRequest");
 //jest.setTimeout(500000); //if testing screenscraper online (goes really slow sometimes)
 
 describe("--> Screenscraper engine", () => {
   it("Obtains the assets of the game metal slug", async () => {
-    await expect(scrape("mslug.zip")).resolves.toEqual(mslug_SS_ExpectedAssets);
+    await expect(scrape_screenscraper("mslug.zip")).resolves.toEqual(
+      mslug_SS_ExpectedAssets
+    );
   });
 
   it("Obtains the assets of the game Aero the Acro-Bat on Super Nintendo", async () => {
     await expect(
-      scrape("Aero the Acro-Bat (USA).sfc", undefined, GameSystems.SNES)
+      scrape_screenscraper(
+        "Aero the Acro-Bat (USA).sfc",
+        undefined,
+        GameSystems.SNES
+      )
     ).resolves.toEqual(aerosnes_SS_ExpectedAssets);
   });
 
   it("Obtains the assets of the game Aero the Acro-Bat on MegaDrive", async () => {
     await expect(
-      scrape("Aero the Acro-Bat (USA).sfc", undefined, GameSystems.MEGADRIVE)
+      scrape_screenscraper(
+        "Aero the Acro-Bat (USA).sfc",
+        undefined,
+        GameSystems.MEGADRIVE
+      )
     ).resolves.toEqual(aeromega_SS_ExpectedAssets);
   });
   it("Obtains the assets of super mario bros 2 (NES) with default parameters", async () => {
-    await expect(scrape("Super Mario Bros. 2 (USA).zip")).resolves.toEqual(
-      smb2_SS_ExpectedAssets
-    );
+    await expect(
+      scrape_screenscraper("Super Mario Bros. 2 (USA).zip")
+    ).resolves.toEqual(smb2_SS_ExpectedAssets);
   });
   it("Obtains the assets of super mario bros 2 (NES) with custom region and custom language", async () => {
     await expect(
-      scrape(
+      scrape_screenscraper(
         "Super Mario Bros. 2 (USA).zip",
         undefined,
         undefined,
@@ -51,7 +61,7 @@ describe("--> Screenscraper engine", () => {
   });
   it("Obtains the assets of super mario bros 2 (NES) with custom language and wrong region", async () => {
     await expect(
-      scrape(
+      scrape_screenscraper(
         "Super Mario Bros. 2 (USA).zip",
         undefined,
         undefined,
@@ -62,7 +72,7 @@ describe("--> Screenscraper engine", () => {
   });
   it("Obtains the assets of super mario bros 2 (NES) with custom region and wrong language", async () => {
     await expect(
-      scrape(
+      scrape_screenscraper(
         "Super Mario Bros. 2 (USA).zip",
         undefined,
         undefined,
@@ -73,7 +83,7 @@ describe("--> Screenscraper engine", () => {
   });
   it("Obtains the assets of super mario bros 2 (NES) with wrong both language and region", async () => {
     await expect(
-      scrape(
+      scrape_screenscraper(
         "Super Mario Bros. 2 (USA).zip",
         undefined,
         undefined,
@@ -86,6 +96,6 @@ describe("--> Screenscraper engine", () => {
   //takes too long if testing it against the real web api . TODO: see why
   //test invalid each param
   it("Obtains {} from a random non existant rom in the db", async () => {
-    await expect(scrape("somerandomfile")).resolves.toEqual({});
+    await expect(scrape_screenscraper("somerandomfile")).resolves.toEqual({});
   });
 });

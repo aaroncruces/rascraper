@@ -27,7 +27,7 @@ const FALLBACKREGION: string = ScreenScraperRegions.US;
  * @param customRegion For assets of other regions (like jp for an us game). if  undefined, it will get the region from the api and store in the field "gameAssets.deducedGameSystem"
  * @returns the asset of the game or {}
  */
-const scrape: ScrapeFunction = async (
+const scrape_screenscraper: ScrapeFunction = async (
   romName: string,
   romCRC?: string | undefined,
   gamesystem?: GameSystem | undefined,
@@ -182,4 +182,4 @@ const gameSystemFromScreenScraperID = (id: number): GameSystem | undefined => {
   }
 };
 
-export default scrape;
+export default scrape_screenscraper;
