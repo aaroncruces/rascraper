@@ -1,9 +1,8 @@
 import { scrapeSingleGame } from "../../scraper/scraper";
-import { mslugExpectedAssets } from "../scraping_engines/__tests_helpers__/screenscraper/mslug_asset";
-import { smb2ExpectedAssets } from "../scraping_engines/__tests_helpers__/screenscraper/smb2_asset";
+
 jest.mock("../../io/apiRequest");
 
-describe("scraping a single rom", () => {
+describe("scraping a single rom with ", () => {
   it("scrapes the assets from metal slug with the default parameters", async () => {
     await expect(scrapeSingleGame("mslug.zip")).resolves.toEqual(
       mslugExpectedAssets

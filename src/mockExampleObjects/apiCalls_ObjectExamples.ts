@@ -2,11 +2,11 @@ import {
   devid,
   devpassword,
   softname,
-} from "../../../../configs/secret/screenscraper_dev_credentials";
-import { aeromega_ss } from "./screenscraperObjectsReturned/aeromega";
-import { aerosnes_ss } from "./screenscraperObjectsReturned/aerosnes";
-import { mslug_ss } from "./screenscraperObjectsReturned/mslug";
-import { smb2_ss } from "./screenscraperObjectsReturned/smb2";
+} from "../../configs/secret/screenscraper_dev_credentials";
+import { aeromega_ss } from "./screenscraper/returnedFromApi/aeromega";
+import { aerosnes_ss } from "./screenscraper/returnedFromApi/aerosnes";
+import { mslug_ss } from "./screenscraper/returnedFromApi/mslug";
+import { smb2_ss } from "./screenscraper/returnedFromApi/smb2";
 
 interface objectExample {
   url: string;

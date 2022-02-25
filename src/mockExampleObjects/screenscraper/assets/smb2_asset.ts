@@ -1,5 +1,5 @@
-import { Assets } from "../../../../interfacesAndStructures/Assets";
-import { GameSystems } from "../../../../interfacesAndStructures/GameSystems";
+import { Assets } from "../../../interfacesAndStructures/Assets";
+import { GameSystems } from "../../../interfacesAndStructures/GameSystems";
 
 export const smb2ExpectedAssets: Assets = {
   gameName: "Super Mario Bros. 2",
