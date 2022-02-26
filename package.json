@@ -8,7 +8,7 @@
     "preset": "ts-jest",
     "testEnvironment": "node",
     "modulePathIgnorePatterns": [
-      "testsandbox"
+      "fsSandbox"
     ],
     "globals": {
       "ts-jest": {

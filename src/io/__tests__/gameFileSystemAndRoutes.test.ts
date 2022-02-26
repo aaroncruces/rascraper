@@ -15,13 +15,13 @@ jest.mock("../gameFileSystemAndRoutes");
 
 describe("--> Getting the gamesystem with gameSystemFromRomFolderRoute ", () => {
   it("obtains a game as an instance of GameSystem from the route ./.../gamesystemfolder/.../rom", () => {
-    const folderRoute = "./testsandbox/snes";
+    const folderRoute = "./fsSandbox/snes";
     const gameRoute = folderRoute + "/examplerom.zip";
     expect(gameSystemFromRomFolderRoute(gameRoute)).toEqual(GameSystems.SNES);
   });
 
   it("obtains nothing as an instance of GameSystem from the route ./.../NotAgamesystemfolder/.../rom", async () => {
-    const folderRoute = "./testsandbox/nosystem";
+    const folderRoute = "./fsSandbox/nosystem";
     const gameRoute = folderRoute + "/examplerom.unknown";
     expect(gameSystemFromRomFolderRoute(gameRoute)).toBeUndefined();
   });
@@ -29,7 +29,7 @@ describe("--> Getting the gamesystem with gameSystemFromRomFolderRoute ", () => 
 
 describe("--> Getting the gamesystem with gameSystemFromRomExtension ", () => {
   it("obtains a game as an instance of GameSystem from the extension .gen in the route ./.../rom.gen", async () => {
-    const folderRoute = "./testsandbox/snes";
+    const folderRoute = "./fsSandbox/snes";
     const gameRoute = folderRoute + "/examplerom.gen";
     expect(gameSystemFromRomExtension(gameRoute)).toEqual(
       GameSystems.MEGADRIVE
@@ -37,14 +37,14 @@ describe("--> Getting the gamesystem with gameSystemFromRomExtension ", () => {
   });
 
   it("Obtains nothing as an instance of GameSystem from the route ./.../NotAgamesystemfolder/.../rom", async () => {
-    const folderRoute = "./testsandbox/megadrive";
+    const folderRoute = "./fsSandbox/megadrive";
     const gameRoute = folderRoute + "/examplerom.unknown";
     expect(gameSystemFromRomExtension(gameRoute)).toBeUndefined();
   });
 });
 
 describe("--> Gets a list of all the files in a folder with getGamesRouteList ", () => {
-  const sandboxFolder = "./testsandbox";
+  const sandboxFolder = "./fsSandbox";
   const rom1 = sandboxFolder + "/snesrom1111.zip";
   const rom2 = sandboxFolder + "/folder2/megadriverom.gen";
   const rom3 = sandboxFolder + "/folder3/subfolder/genesis.gen";
@@ -60,7 +60,7 @@ describe("--> Gets a list of all the files in a folder with getGamesRouteList ",
     await deleteFileOrFolder(sandboxFolder);
   });
 
-  it("Obtains files (games) from folder ./testsandbox", async () => {
+  it("Obtains files (games) from folder ./fsSandbox", async () => {
     await createTextFileFromObject(rom1, {
       examplerom: "data",
     });

@@ -149,21 +149,21 @@ describe("--> Create and delete folders and text files", () => {
     resetGlobalFSMock();
   });
   afterAll(() => {});
-  it("creates a folder  called jestfoldertest in ./testsandbox", async () => {
+  it("creates a folder  called jestfoldertest in ./fsSandbox", async () => {
     await expect(
-      createFolder("./testsandbox/jestfoldertest")
+      createFolder("./fsSandbox/jestfoldertest")
     ).resolves.toBeTruthy();
   });
 
   it("creates the same folder again", async () => {
     await expect(
-      createFolder("./testsandbox/jestfoldertest")
+      createFolder("./fsSandbox/jestfoldertest")
     ).resolves.toBeTruthy();
   });
 
   it("deletes the folder created", async () => {
     await expect(
-      deleteFileOrFolder("./testsandbox/jestfoldertest")
+      deleteFileOrFolder("./fsSandbox/jestfoldertest")
     ).resolves.toBeTruthy();
   });
 
@@ -171,7 +171,7 @@ describe("--> Create and delete folders and text files", () => {
     const testObjectToBeWritten = { hello: "World", hola: "mundo" };
     await expect(
       createTextFileFromObject(
-        "./testsandbox/jestfiletest.json",
+        "./fsSandbox/jestfiletest.json",
         testObjectToBeWritten
       )
     ).resolves.toBeTruthy();
@@ -179,7 +179,7 @@ describe("--> Create and delete folders and text files", () => {
 
   it("deletes a nonexistant folder or file to try idempotency", async () => {
     await expect(
-      deleteFileOrFolder("./testsandbox/somefolderNonExistant")
+      deleteFileOrFolder("./fsSandbox/somefolderNonExistant")
     ).resolves.toBeTruthy();
   });
 
@@ -187,11 +187,11 @@ describe("--> Create and delete folders and text files", () => {
     resetGlobalFSMock();
     const testObjectToBeWritten = { hello: "World", hola: "mundo" };
     await createTextFileFromObject(
-      "./testsandbox/jestfiletest.json",
+      "./fsSandbox/jestfiletest.json",
       testObjectToBeWritten
     );
     await expect(
-      readTextFileAsObject("./testsandbox/jestfiletest.json")
+      readTextFileAsObject("./fsSandbox/jestfiletest.json")
     ).resolves.toEqual(testObjectToBeWritten);
   });
 
@@ -199,7 +199,7 @@ describe("--> Create and delete folders and text files", () => {
     const testObjectToBeWritten = { hello: "World", hola: "mundo" };
     await expect(
       createTextFileFromObject(
-        "./testsandbox/jestfiletest.json",
+        "./fsSandbox/jestfiletest.json",
         testObjectToBeWritten
       )
     ).resolves.toBeTruthy();
@@ -207,7 +207,7 @@ describe("--> Create and delete folders and text files", () => {
 
   it("deletes file created (jestfiletest.json)", async () => {
     await expect(
-      deleteFileOrFolder("./testsandbox/jestfiletest.json")
+      deleteFileOrFolder("./fsSandbox/jestfiletest.json")
     ).resolves.toBeTruthy();
   });
 });

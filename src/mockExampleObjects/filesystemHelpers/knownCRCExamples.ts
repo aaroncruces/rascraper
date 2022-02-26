@@ -1,9 +1,7 @@
-export interface FileCRCPair {
-  filename: string;
-  crc: string;
-}
+import { FileCRCStruct } from "../../interfacesAndStructures/FileCRCStruct";
+
 export const CRCTest_filename = "CRCTest.txt";
-export const knowcrc: Array<FileCRCPair> = [
+export const knowcrc: Array<FileCRCStruct> = [
   {
     filename: "mslug.zip",
     crc: "somecrc",
