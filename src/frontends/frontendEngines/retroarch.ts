@@ -1,12 +1,12 @@
 // todo: define specific interfaces
 // apropiate architecture-specific and frontend-specific asset format re-encoding
 
+import { GameCompleteInformation } from "../../interfacesAndStructures/GameCompleteInformation";
+import { GameSystem } from "../../interfacesAndStructures/GameSystems";
 import {
-  gameSystemFromRomExtension,
   gameSystemFromRomFolderRoute,
-} from "../io/gameFileSystemAndRoutes";
-import { GameCompleteInformation } from "../interfacesAndStructures/GameCompleteInformation";
-import { GameSystem } from "../interfacesAndStructures/GameSystems";
+  gameSystemFromRomExtension,
+} from "../../io/gameFileSystemAndRoutes";
 
 const path = require("path");
 

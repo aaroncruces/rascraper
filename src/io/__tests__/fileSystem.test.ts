@@ -1,6 +1,6 @@
 import {
-  CRCTest_filename,
-  knowcrc,
+  CRCTestFile,
+  knowCRCExampleList,
 } from "../../mockExampleObjects/filesystemHelpers/knownCRCExamples";
 import {
   createFolder,
@@ -214,10 +214,10 @@ describe("--> Create and delete folders and text files", () => {
 //todo: mock crc
 describe("--> Get CRC from files. Make sure to have files with known crc", () => {
   it("Gets a crc from a known example", async () => {
-    const testFileName = CRCTest_filename;
+    const testFileName = CRCTestFile;
     const fileRoute =
       "src/mockExampleObjects/filesystemHelpers/" + testFileName;
-    const knowncrcFromTestFile = knowcrc.find(
+    const knowncrcFromTestFile = knowCRCExampleList.find(
       (crcpair) => crcpair.filename == testFileName
     )?.crc;
     await expect(getCRCFromFile(fileRoute)).resolves.toEqual(

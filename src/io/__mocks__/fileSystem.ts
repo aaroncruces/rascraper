@@ -1,4 +1,4 @@
-import { knowcrc } from "../../mockExampleObjects/filesystemHelpers/knownCRCExamples";
+import { knowCRCExampleList } from "../../mockExampleObjects/filesystemHelpers/knownCRCExamples";
 
 //todo: define ts structure of mock fs
 const path = require("path");
@@ -117,4 +117,5 @@ export const readTextFileAsObject = async (
 };
 
 export const getCRCFromFile = async (fileRoute: string): Promise<string> =>
-  knowcrc.find((pair) => pair.filename == path.basename(fileRoute))?.crc || "";
+  knowCRCExampleList.find((pair) => pair.filename == path.basename(fileRoute))
+    ?.crc || "";

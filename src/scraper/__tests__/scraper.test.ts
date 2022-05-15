@@ -3,8 +3,9 @@ import { smb2_SS_ExpectedAssets } from "../../mockExampleObjects/screenscraper/a
 import { scrapeGame } from "../../scraper/scraper";
 
 jest.mock("../../io/apiRequest");
+//jest.setTimeout(500000); //if testing screenscraper online (goes really slow sometimes)
 
-describe("Test scrapping with default parameters", () => {
+describe("Test scrapping with default parameters (screenscraper.fr)", () => {
   it("scrapes the assets from metal slug with the default parameters", async () => {
     await expect(scrapeGame("mslug.zip")).resolves.toEqual(
       mslug_SS_ExpectedAssets

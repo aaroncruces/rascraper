@@ -6,4 +6,4 @@ configs/secret
 git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
 package-lock.json
 fsSandbox
-romsSandbox
+romsandbox
