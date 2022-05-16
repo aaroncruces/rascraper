@@ -1,9 +1,12 @@
+import { GameCompleteInformation } from "../../interfacesAndStructures/GameCompleteInformation";
 import { knowCRCExampleList } from "../../mockExampleObjects/filesystemHelpers/knownCRCExamples";
 import { getGameInfoListFromScraper, getGameNamesAndCRCList } from "../main";
 const path = require("path");
+jest.setTimeout(500000); //if testing screenscraper online (goes really slow sometimes)
+jest.mock("../../io/apiRequest");
 
-describe.skip("getGameNamesAndCRCList", () => {
-  test("each element given by getGameNamesAndCRCList must be consistant filename and fileroute", async () => {
+describe("getGameNamesAndCRCList. using the folder 'romsandbox' and knownCRCExamples.knowCRCExampleList", () => {
+  test("each element given by getGameNamesAndCRCList", async () => {
     const romNameAndCRCStructList = await getGameNamesAndCRCList("romsandbox");
     romNameAndCRCStructList.forEach((romnameAndCRCStructItem) => {
       const basenameFromFileRoute = path.basename(
@@ -13,7 +16,6 @@ describe.skip("getGameNamesAndCRCList", () => {
     });
   });
 
-  //mock comparison
   test("each element given by getGameNamesAndCRCList must give a valid crc", async () => {
     const romNameAndCRCStructList = await getGameNamesAndCRCList("romsandbox");
 
@@ -25,8 +27,10 @@ describe.skip("getGameNamesAndCRCList", () => {
     });
   });
 });
-describe("logs", () => {
-  test("log", async () => {
-    const testing = await getGameInfoListFromScraper("romsandbox");
+describe.skip("getGameInfoListFromScraper. only for logging. didn't mock.", () => {
+  test("getGameInfoListFromScraper.", async () => {
+    const infolist: GameCompleteInformation[] =
+      await getGameInfoListFromScraper("romsandbox");
+    //
   });
 });

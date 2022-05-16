@@ -17,8 +17,8 @@
     }
   },
   "scripts": {
-    "start": "tsc && node app.js",
-    "tsnode": "ts-node-dev --respawn --transpile-only --watch ./ app.ts",
+    "start": "ts-node-dev --transpile-only src/main/main.ts",
+    "tsnode": "ts-node-dev --respawn --transpile-only --watch ./ src/main/main.ts",
     "tdd": "jest --watchAll  --runInBand ",
     "gitlog": "git log --graph --full-history --all --pretty=format:\"%h%x09%d%x20%s\""
   },
