@@ -1,7 +1,7 @@
 export interface GameSystem {
   systemFullName: string;
   systemShortName: string;
-  defaultFolder: string;
+  folderNames: Array<string>;
   screenscraperID: number;
   extensions: Array<string>;
 }
@@ -16,7 +16,7 @@ export class GameSystems {
   static SNES: GameSystem = {
     systemFullName: "Super Nintendo Entertainment System",
     systemShortName: "Snes",
-    defaultFolder: "snes",
+    folderNames: ["snes", "SNES"],
     screenscraperID: 4,
     extensions: ["smc", "sfc"],
   };
@@ -24,7 +24,7 @@ export class GameSystems {
   static MEGADRIVE: GameSystem = {
     systemFullName: "Sega Mega Drive/Genesis",
     systemShortName: "Megadrive",
-    defaultFolder: "megadrive",
+    folderNames: ["megadrive", "genesis"],
     screenscraperID: 1,
     extensions: ["gen", "smd", "md"],
   };
@@ -32,7 +32,7 @@ export class GameSystems {
   static NEOGEO: GameSystem = {
     systemFullName: "Neo Geo",
     systemShortName: "Neogeo",
-    defaultFolder: "neogeo",
+    folderNames: ["neogeo"],
     screenscraperID: 142,
     extensions: ["zip"],
   };
@@ -40,7 +40,7 @@ export class GameSystems {
   static NES: GameSystem = {
     systemFullName: "Nintendo Entertainment System",
     systemShortName: "Nes",
-    defaultFolder: "nes",
+    folderNames: ["nes"],
     screenscraperID: 3,
     extensions: ["nes"],
   };

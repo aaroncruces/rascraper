@@ -18,7 +18,7 @@ export const gameSystemFromRomFolderRoute = (
       //@ts-ignore because I don't know how to iterate "properly" the static members of a class
       GameSystems[gameSystemSelector] as GameSystem;
 
-    if (path.dirname(fileRoute).includes(gameSystemIterated.defaultFolder))
+    if (path.dirname(fileRoute).includes(gameSystemIterated.folderNames))
       return gameSystemIterated;
   }
 };

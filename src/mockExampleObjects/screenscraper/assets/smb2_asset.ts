@@ -23,13 +23,7 @@ export const smb2_SS_ExpectedAssets: Assets = {
   boxartCRC: "2dfa9b08",
   bezelURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=bezel-16-9(us)`,
   bezelCRC: "949b3649",
-  deducedGameSystem: {
-    systemFullName: "Nintendo Entertainment System",
-    systemShortName: "Nes",
-    defaultFolder: "nes",
-    screenscraperID: 3,
-    extensions: ["nes"],
-  },
+  deducedGameSystem: GameSystems.NES,
 };
 
 //GameSystems.NES
@@ -66,13 +60,7 @@ export const smb2_default_jp_SS_ExpectedAssets: Assets = {
   boxartCRC: "fd7e86f0",
   bezelURL: `https://clone.screenscraper.fr/api2/mediaJeu.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&ssid=&sspassword=&systemeid=3&jeuid=1248&media=bezel-16-9(us)`,
   bezelCRC: "949b3649",
-  deducedGameSystem: {
-    systemFullName: "Nintendo Entertainment System",
-    systemShortName: "Nes",
-    defaultFolder: "nes",
-    screenscraperID: 3,
-    extensions: ["nes"],
-  },
+  deducedGameSystem: GameSystems.NES,
 };
 export const smb2_fr_jp_SS_ExpectedAssets: Assets = {
   gameName: "Super Mario USA",

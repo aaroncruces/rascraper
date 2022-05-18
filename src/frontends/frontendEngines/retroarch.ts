@@ -94,7 +94,7 @@ export const romRouteToPlayListName = (
       for (let iteratedFolderName of fullFolderSequence) {
         if (!gameSystemFolderReached) {
           if (
-            gameSystemFromFolder.defaultFolder ==
+            gameSystemFromFolder.folderNames ==
             (iteratedFolderName as string).toLowerCase()
           ) {
             gameSystemFolderReached = true;
