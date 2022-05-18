@@ -40,6 +40,8 @@ const scrape_screenscraper: ScrapeFunction = async (
   }
 
   const sourceURL = `https://www.screenscraper.fr/api2/jeuInfos.php?devid=${devid}&devpassword=${devpassword}&softname=${softname}&output=json&romtype=rom${gameSystemIDParam}&romnom=${romName}`;
+  //console.log(encodeURI(sourceURL));
+
   const responseObject = await getObjectFromApi(encodeURI(sourceURL));
   //@ts-ignore
   if (!responseObject.response) return {};
@@ -168,7 +170,7 @@ const getMediaObjectFromResponse = (
 };
 
 const getRegionFromResponse = (responseObject: any) =>
-  responseObject.response.jeu.regions.shortname;
+  responseObject.response.jeu.regions?.shortname;
 
 const getIDFromResponse = (responseObject: any): number =>
   responseObject.response.jeu.systeme.id;
@@ -181,5 +183,9 @@ const gameSystemFromScreenScraperID = (id: number): GameSystem | undefined => {
     if (gameSystemIterated.screenscraperID == id) return gameSystemIterated;
   }
 };
+
+// scrape_screenscraper("Aero the Acro-Bat (USA).zip").then((returned) =>
+//   console.log(returned)
+// );
 
 export default scrape_screenscraper;

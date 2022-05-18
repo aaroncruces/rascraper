@@ -4,7 +4,7 @@ import {
   softname,
 } from "../../../../configs/secret/screenscraper_dev_credentials";
 
-export const smb2_ss = {
+export const smb2_usa_ss = {
   header: {
     APIversion: "2.0",
     dateTime: "2022-02-24",
