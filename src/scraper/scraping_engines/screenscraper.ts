@@ -3,7 +3,7 @@ import {
   devpassword,
   softname,
 } from "../../../configs/secret/screenscraper_dev_credentials";
-import { ScrapedAssets } from "../../interfacesAndStructures/ScrapedAssets";
+import { GameInformation } from "../../interfacesAndStructures/GameInformation";
 import {
   GameSystem,
   GameSystems,
@@ -46,7 +46,7 @@ const scrape_screenscraper: ScrapeFunction = async (
   //@ts-ignore
   if (!responseObject.response) return {};
 
-  let gameAssets: ScrapedAssets = {};
+  let gameAssets: GameInformation = {};
 
   gameAssets.gameName = getNameFromResponse(responseObject, customRegion);
 

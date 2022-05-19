@@ -1,4 +1,4 @@
-import { ScrapedAssets } from "../../../interfacesAndStructures/ScrapedAssets";
+import { GameInformation } from "../../../interfacesAndStructures/GameInformation";
 import { GameSystems } from "../../../interfacesAndStructures/GameSystems";
 import {
   devid,
@@ -6,7 +6,7 @@ import {
   softname,
 } from "../../../../configs/secret/screenscraper_dev_credentials";
 
-export const mslug_SS_ExpectedAssets: ScrapedAssets = {
+export const mslug_SS_ExpectedAssets: GameInformation = {
   gameName: "Metal Slug - Super Vehicle-001",
   gameDescription:
     "Metal Slug, originally released on the Neo Geo, is a side-scrolling shoot'em'up.\n" +
