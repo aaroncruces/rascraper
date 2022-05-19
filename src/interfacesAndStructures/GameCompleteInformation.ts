@@ -1,5 +1,5 @@
-import { ScrapedAssets } from "./ScrapedAssets";
 import { GameSystem } from "./GameSystems";
+import { ScrapedAssets } from "./ScrapedAssets";
 
 export interface GameCompleteInformation {
   gameCurrentRoute?: string;
