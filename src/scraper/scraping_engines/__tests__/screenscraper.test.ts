@@ -16,7 +16,6 @@ import {
   smb2_fr_default_SS_ExpectedAssets,
   smb2_fr_jp_SS_ExpectedAssets,
 } from "../../../mockExampleObjects/screenscraper/assets/smb2_asset";
-import { aeromega_eur_ss } from "../../../mockExampleObjects/screenscraper/returnedFromApi/aeromega";
 import scrape_screenscraper from "../screenscraper";
 
 jest.mock("../../../io/apiRequest");

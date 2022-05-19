@@ -7,8 +7,14 @@ import { GameSystem } from "./GameSystems";
  * also descriptions and gamenames as text
  */
 export interface GameInformation {
+  //game info:
   gameName?: string;
   gameDescription?: string;
+  gameCurrentRoute?: string;
+  gameDestinationRoute?: string;
+  explicitGameSystem?: GameSystem;
+  gameSubCategory?: string;
+  deducedGameSystem?: GameSystem;
   snapURL?: string;
   snapCRC?: string;
   snapCachedDownloadRoute?: string;
@@ -26,18 +32,4 @@ export interface GameInformation {
   bezelCachedDownloadRoute?: string;
   bezelDestination?: string;
   //todo: videos an others when implementing other frontends
-  deducedGameSystem?: GameSystem;
-  gameCurrentRoute?: string;
-  gameDestination?: string;
-  gameScrapedAssets?: GameInformation;
-  gameGameSystem?: GameSystem;
-  gameSubCategory?: string;
-
-  /*
-  gameCurrentRoute?: string;
-  gameDestination?: string;
-  gameScrapedAssets?: ScrapedAssets;
-  gameGameSystem?: GameSystem;
-  gameSubCategory?: string;
-   */
 }
