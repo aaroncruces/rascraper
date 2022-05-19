@@ -7,7 +7,6 @@ import { GameSystem } from "./GameSystems";
  * also descriptions and gamenames as text
  */
 export interface GameInformation {
-  //game info:
   gameName?: string;
   gameDescription?: string;
   gameCurrentRoute?: string;
