@@ -26,8 +26,10 @@ export const createPlaylistFilesAndDownloadAssets = async (
   const playlistList: { [playlistName: string]: RetroarchPlaylist[] } = {};
   for (let gameItem of gamelist) {
     //todo: see how to define better the game system
-    const playlistName: string = romRouteToPlayListName(gameItem.gameRoute);
-    const gameFullRoute = path.resolve(gameItem.gameRoute);
+    const playlistName: string = romRouteToPlayListName(
+      gameItem.gameCurrentRoute
+    );
+    const gameFullRoute = path.resolve(gameItem.gameCurrentRoute);
     const playlist: RetroarchPlaylist = generateRetroArchPlaylistItem(
       gameFullRoute,
       gameItem.gameAssets?.gameName,

@@ -1,9 +1,9 @@
-import { Assets } from "./Assets";
+import { ScrapedAssets } from "./ScrapedAssets";
 import { GameSystem } from "./GameSystems";
 
 export interface GameCompleteInformation {
-  gameRoute?: string;
-  gameAssets?: Assets;
+  gameCurrentRoute?: string;
+  gameAssets?: ScrapedAssets;
   gameGameSystem?: GameSystem;
   gameSubCategory?: string;
 }

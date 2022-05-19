@@ -1,0 +1,19 @@
+Needed:
+    per game (GameCompleteInformation.ts):
+        rom current location (string)
+        rom destination (romDefaultFolder/system/subcategory1/.../rom.bin) (string)
+        rom sub category (string)
+        rom gameAssets to dowload (Asset.ts)
+        per asset:
+            asset destination cached (pre delivered) location (string)
+            asset destination destination (on frontend folder)
+
+    per list:
+
+
+    playlist cached (pre delivered) location
+    playlist destination (on frontend folder)
+    asset destination cached (pre delivered) location
+    asset destination destination (on frontend folder)
+    create playlist with rom info
+    

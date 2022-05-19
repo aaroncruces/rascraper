@@ -1,4 +1,4 @@
-import { Assets } from "../../interfacesAndStructures/Assets";
+import { ScrapedAssets } from "../../interfacesAndStructures/ScrapedAssets";
 import { GameSystem } from "../../interfacesAndStructures/GameSystems";
 
 /**
@@ -11,5 +11,5 @@ export interface ScrapeFunction {
     gamesystem?: GameSystem | undefined,
     language?: string | undefined,
     customRegion?: string | undefined
-  ): Promise<Assets>;
+  ): Promise<ScrapedAssets>;
 }

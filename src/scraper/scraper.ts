@@ -1,7 +1,7 @@
 import screenscraper from "./scraping_engines/screenscraper";
 import { ScrapingEngine } from "./scraping_engines/ScrapingEngines";
 import { GameSystem } from "../interfacesAndStructures/GameSystems";
-import { Assets } from "../interfacesAndStructures/Assets";
+import { ScrapedAssets } from "../interfacesAndStructures/ScrapedAssets";
 
 export const scrapeGame = async (
   romName: string,
@@ -10,7 +10,7 @@ export const scrapeGame = async (
   language?: string,
   customRegion?: string,
   scrapingEngine: string = ScrapingEngine.screenscraper
-): Promise<Assets> => {
+): Promise<ScrapedAssets> => {
   if (scrapingEngine == ScrapingEngine.screenscraper) {
     const result = await screenscraper(
       romName,

@@ -54,7 +54,7 @@ export const getGameInfoListFromScraper = async (
         ) || gameSystemFromRomExtension(fileCRCStructItem.filename);
 
       const itemInformation: GameCompleteInformation = {
-        gameRoute: fileCRCStructItem.fileRoute,
+        gameCurrentRoute: fileCRCStructItem.fileRoute,
         gameGameSystem: gameSystemFromFile,
         //3: scrape each game and add its contents (assets and gamesystem if step2 fails) to a gamecompleteinfo
         gameAssets: await scrape_screenscraper(

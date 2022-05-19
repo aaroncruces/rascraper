@@ -3,10 +3,10 @@ import {
   devpassword,
   softname,
 } from "../../../../configs/secret/screenscraper_dev_credentials";
-import { Assets } from "../../../interfacesAndStructures/Assets";
+import { ScrapedAssets } from "../../../interfacesAndStructures/ScrapedAssets";
 import { GameSystems } from "../../../interfacesAndStructures/GameSystems";
 
-export const aeromega_usa_SS_ExpectedAssets: Assets = {
+export const aeromega_usa_SS_ExpectedAssets: ScrapedAssets = {
   gameName: "Aero the Acro-Bat",
   gameDescription:
     "You play as bat Aero, who have to stop the mad scientist Edgar Ektor, who is trying to rid the world of amusement and fun. So you jump through the circus-style levels, using different kinds of machines such as catapults, cannons, bubble machines, platforms, etc., collecting various power-ups such as cheese, soda, keys, clocks, etc. and avoiding lethal obstacles.",
@@ -20,7 +20,7 @@ export const aeromega_usa_SS_ExpectedAssets: Assets = {
   bezelCRC: "a0eda7a9",
   deducedGameSystem: GameSystems.MEGADRIVE,
 };
-export const aeromega_eur_SS_ExpectedAssets: Assets = {
+export const aeromega_eur_SS_ExpectedAssets: ScrapedAssets = {
   gameName: "Aero the Acro-Bat",
   gameDescription:
     "You play as bat Aero, who have to stop the mad scientist Edgar Ektor, who is trying to rid the world of amusement and fun. So you jump through the circus-style levels, using different kinds of machines such as catapults, cannons, bubble machines, platforms, etc., collecting various power-ups such as cheese, soda, keys, clocks, etc. and avoiding lethal obstacles.",
