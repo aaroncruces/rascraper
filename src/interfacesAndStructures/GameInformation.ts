@@ -11,24 +11,31 @@ export interface GameInformation {
   gameDescription?: string;
   gameCurrentRoute?: string;
   gameDestinationRoute?: string;
-  explicitGameSystem?: GameSystem;
   gameSubCategory?: string;
+  gameCRC?: string;
+
+  explicitGameSystem?: GameSystem;
   deducedGameSystem?: GameSystem;
+
   snapURL?: string;
   snapCRC?: string;
   snapCachedDownloadRoute?: string;
   snapDestination?: string;
+
   titleURL?: string;
   titleCRC?: string;
   titleCachedDownloadRoute?: string;
   titleDestination?: string;
+
   boxartURL?: string;
   boxartCRC?: string;
   boxartCachedDownloadRoute?: string;
   boxartDestination?: string;
+
   bezelURL?: string;
   bezelCRC?: string;
   bezelCachedDownloadRoute?: string;
   bezelDestination?: string;
+
   //todo: videos an others when implementing other frontends
 }
